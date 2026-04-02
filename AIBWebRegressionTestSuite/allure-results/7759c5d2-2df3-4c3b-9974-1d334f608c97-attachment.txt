@@ -1,0 +1,13 @@
+
+========== TRANSACTION EXTRACTION ==========
+Element text     : Transactions saved with Transaction No: 1-V2600000639
+Element length   : 53
+Parent text      : SuccessTransactions saved with Transaction No: 1-V2600000639
+Parent length    : 60
+============================================
+
+✅ Payment TXN format :  1-V2600000639
+✅ Approval TXN format:  -T2600000639
+==========================================
+
+✅ Extraction confirmed, TXN No: -T2600000639

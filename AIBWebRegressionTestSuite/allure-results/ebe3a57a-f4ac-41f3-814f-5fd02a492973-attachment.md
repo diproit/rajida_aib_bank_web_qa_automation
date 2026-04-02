@@ -1,0 +1,932 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Colombo District TCCS Union Ltd. In Sri Lanka.
+          - generic [ref=e12]:
+            - generic [ref=e14]:
+              - img [ref=e17]
+              - generic [ref=e19]: Maharagama
+            - generic [ref=e21]:
+              - img [ref=e24]
+              - generic [ref=e26]: Approval Dashboard
+        - generic [ref=e28]:
+          - generic [ref=e30]:
+            - img [ref=e33]
+            - generic [ref=e35]: 31 Mar 2026
+          - generic [ref=e37]:
+            - img [ref=e40]
+            - generic [ref=e43]: 3:37:40 PM
+          - generic [ref=e44]: "|"
+          - generic [ref=e46]:
+            - img [ref=e49]
+            - generic [ref=e52]: connected
+          - combobox "Language" [ref=e53]:
+            - option "English" [selected]
+            - option "සිංහල"
+        - button "@NilkiHR" [ref=e56] [cursor=pointer]:
+          - generic [ref=e59]:
+            - img [ref=e62]
+            - generic [ref=e64]: "@NilkiHR"
+      - generic [ref=e67]:
+        - link "Dashboard" [ref=e69] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e70]: Dashboard
+        - link "Members" [ref=e72] [cursor=pointer]:
+          - /url: /members
+          - generic [ref=e73]: Members
+        - link "Ledgers" [ref=e75] [cursor=pointer]:
+          - /url: /ledgers
+          - generic [ref=e76]: Ledgers
+        - button "Savings" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]:
+            - text: Savings
+            - img [ref=e81]
+        - button "Loans" [ref=e84] [cursor=pointer]:
+          - generic [ref=e85]:
+            - text: Loans
+            - img [ref=e87]
+        - button "Transactions" [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]:
+            - text: Transactions
+            - img [ref=e93]
+        - button "View" [ref=e96] [cursor=pointer]:
+          - generic [ref=e97]:
+            - text: View
+            - img [ref=e99]
+        - button "Process" [ref=e102] [cursor=pointer]:
+          - generic [ref=e103]:
+            - text: Process
+            - img [ref=e105]
+        - button "Setup" [ref=e108] [cursor=pointer]:
+          - generic [ref=e109]:
+            - text: Setup
+            - img [ref=e111]
+        - link "Reports" [ref=e114] [cursor=pointer]:
+          - /url: /reports
+          - generic [ref=e115]: Reports
+        - button "Help" [ref=e117] [cursor=pointer]:
+          - generic [ref=e118]:
+            - text: Help
+            - img [ref=e120]
+        - generic "Cashier Status" [ref=e122] [cursor=pointer]:
+          - generic [ref=e123]:
+            - img [ref=e124]
+            - generic "signed off" [ref=e129]:
+              - generic [ref=e131]: signed off
+      - generic [ref=e134]:
+        - generic [ref=e136]:
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - generic [ref=e140]: "Filter by Sections:"
+              - button "Payments" [ref=e142] [cursor=pointer]:
+                - generic [ref=e143]:
+                  - generic:
+                    - generic:
+                      - text: Payments
+                      - generic:
+                        - img
+            - generic [ref=e144]:
+              - generic [ref=e145]: "Filter by User:"
+              - button "All Users" [ref=e147] [cursor=pointer]:
+                - generic [ref=e148]:
+                  - generic:
+                    - generic:
+                      - text: All Users
+                      - generic:
+                        - img
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - generic [ref=e154]: "Pending Approvals:"
+              - generic [ref=e155]: "332"
+            - generic [ref=e156]:
+              - generic [ref=e157]: "Approved Today:"
+              - generic [ref=e158]: "0"
+        - table "Pending Approvals" [ref=e161]:
+          - rowgroup [ref=e162]:
+            - row "No Section Amount Name/Description User Date & Time" [ref=e163]:
+              - columnheader "No" [ref=e164]:
+                - generic [ref=e165]: "No"
+              - columnheader "Section" [ref=e166]:
+                - generic [ref=e168]: Section
+              - columnheader "Amount" [ref=e169]:
+                - generic [ref=e171]: Amount
+              - columnheader "Name/Description" [ref=e172]:
+                - generic [ref=e173]: Name/Description
+              - columnheader "User" [ref=e174]:
+                - generic [ref=e175]: User
+              - columnheader "Date & Time" [ref=e176]:
+                - generic [ref=e178]: Date & Time
+          - rowgroup [ref=e179]:
+            - row "1-T2600002661 Payment 2,000.00 Test Automation Nilki Ratnayake 2026-03-31 04:37:02" [ref=e180]:
+              - cell "1-T2600002661" [ref=e181]:
+                - generic [ref=e183] [cursor=pointer]: 1-T2600002661
+              - cell "Payment" [ref=e184]:
+                - generic "Payment" [ref=e188]:
+                  - generic [ref=e190]: Payment
+              - cell "2,000.00" [ref=e191]:
+                - generic [ref=e193]: 2,000.00
+              - cell "Test Automation" [ref=e194]:
+                - generic [ref=e196] [cursor=pointer]: Test Automation
+              - cell "Nilki Ratnayake" [ref=e197]:
+                - generic [ref=e198]: Nilki Ratnayake
+              - cell "2026-03-31 04:37:02" [ref=e199]:
+                - generic [ref=e201]: 2026-03-31 04:37:02
+            - row "1-T2600002660 Payment 100.00 s Nilki Ratnayake 2026-03-31 04:32:27" [ref=e202]:
+              - cell "1-T2600002660" [ref=e203]:
+                - generic [ref=e205] [cursor=pointer]: 1-T2600002660
+              - cell "Payment" [ref=e206]:
+                - generic "Payment" [ref=e210]:
+                  - generic [ref=e212]: Payment
+              - cell "100.00" [ref=e213]:
+                - generic [ref=e215]: "100.00"
+              - cell "s" [ref=e216]:
+                - generic [ref=e218] [cursor=pointer]: s
+              - cell "Nilki Ratnayake" [ref=e219]:
+                - generic [ref=e220]: Nilki Ratnayake
+              - cell "2026-03-31 04:32:27" [ref=e221]:
+                - generic [ref=e223]: 2026-03-31 04:32:27
+            - row "1-T2600002659 Payment 2,000.00 Test Automation Nilki Ratnayake 2026-03-31 04:24:53" [ref=e224]:
+              - cell "1-T2600002659" [ref=e225]:
+                - generic [ref=e227] [cursor=pointer]: 1-T2600002659
+              - cell "Payment" [ref=e228]:
+                - generic "Payment" [ref=e232]:
+                  - generic [ref=e234]: Payment
+              - cell "2,000.00" [ref=e235]:
+                - generic [ref=e237]: 2,000.00
+              - cell "Test Automation" [ref=e238]:
+                - generic [ref=e240] [cursor=pointer]: Test Automation
+              - cell "Nilki Ratnayake" [ref=e241]:
+                - generic [ref=e242]: Nilki Ratnayake
+              - cell "2026-03-31 04:24:53" [ref=e243]:
+                - generic [ref=e245]: 2026-03-31 04:24:53
+            - row "1-T2600002658 Payment 500.00 s Nilki Ratnayake 2026-03-29 23:22:55" [ref=e246]:
+              - cell "1-T2600002658" [ref=e247]:
+                - generic [ref=e249] [cursor=pointer]: 1-T2600002658
+              - cell "Payment" [ref=e250]:
+                - generic "Payment" [ref=e254]:
+                  - generic [ref=e256]: Payment
+              - cell "500.00" [ref=e257]:
+                - generic [ref=e259]: "500.00"
+              - cell "s" [ref=e260]:
+                - generic [ref=e262] [cursor=pointer]: s
+              - cell "Nilki Ratnayake" [ref=e263]:
+                - generic [ref=e264]: Nilki Ratnayake
+              - cell "2026-03-29 23:22:55" [ref=e265]:
+                - generic [ref=e267]: 2026-03-29 23:22:55
+            - row "1-T2600002652 Payment 122.00 test System Setup Admin 2026-03-25 17:41:46" [ref=e268]:
+              - cell "1-T2600002652" [ref=e269]:
+                - generic [ref=e271] [cursor=pointer]: 1-T2600002652
+              - cell "Payment" [ref=e272]:
+                - generic "Payment" [ref=e276]:
+                  - generic [ref=e278]: Payment
+              - cell "122.00" [ref=e279]:
+                - generic [ref=e281]: "122.00"
+              - cell "test" [ref=e282]:
+                - generic [ref=e284] [cursor=pointer]: test
+              - cell "System Setup Admin" [ref=e285]:
+                - generic [ref=e286]: System Setup Admin
+              - cell "2026-03-25 17:41:46" [ref=e287]:
+                - generic [ref=e289]: 2026-03-25 17:41:46
+            - row "1-T2600002651 Payment 1,000.00 test System Setup Admin 2026-03-24 18:30:00" [ref=e290]:
+              - cell "1-T2600002651" [ref=e291]:
+                - generic [ref=e293] [cursor=pointer]: 1-T2600002651
+              - cell "Payment" [ref=e294]:
+                - generic "Payment" [ref=e298]:
+                  - generic [ref=e300]: Payment
+              - cell "1,000.00" [ref=e301]:
+                - generic [ref=e303]: 1,000.00
+              - cell "test" [ref=e304]:
+                - generic [ref=e306] [cursor=pointer]: test
+              - cell "System Setup Admin" [ref=e307]:
+                - generic [ref=e308]: System Setup Admin
+              - cell "2026-03-24 18:30:00" [ref=e309]:
+                - generic [ref=e311]: 2026-03-24 18:30:00
+            - row "1-T2600002636 Payment 500.00 s Nilki Ratnayake 2026-03-22 23:29:19" [ref=e312]:
+              - cell "1-T2600002636" [ref=e313]:
+                - generic [ref=e315] [cursor=pointer]: 1-T2600002636
+              - cell "Payment" [ref=e316]:
+                - generic "Payment" [ref=e320]:
+                  - generic [ref=e322]: Payment
+              - cell "500.00" [ref=e323]:
+                - generic [ref=e325]: "500.00"
+              - cell "s" [ref=e326]:
+                - generic [ref=e328] [cursor=pointer]: s
+              - cell "Nilki Ratnayake" [ref=e329]:
+                - generic [ref=e330]: Nilki Ratnayake
+              - cell "2026-03-22 23:29:19" [ref=e331]:
+                - generic [ref=e333]: 2026-03-22 23:29:19
+            - row "1-T2600002634 Payment 500.00 Water board Anuradha 2026-03-16 23:29:42" [ref=e334]:
+              - cell "1-T2600002634" [ref=e335]:
+                - generic [ref=e337] [cursor=pointer]: 1-T2600002634
+              - cell "Payment" [ref=e338]:
+                - generic "Payment" [ref=e342]:
+                  - generic [ref=e344]: Payment
+              - cell "500.00" [ref=e345]:
+                - generic [ref=e347]: "500.00"
+              - cell "Water board" [ref=e348]:
+                - generic [ref=e350] [cursor=pointer]: Water board
+              - cell "Anuradha" [ref=e351]:
+                - generic [ref=e352]: Anuradha
+              - cell "2026-03-16 23:29:42" [ref=e353]:
+                - generic [ref=e355]: 2026-03-16 23:29:42
+            - row "1-T2600002633 Payment 700.00 test Anuradha 2026-03-16 23:28:05" [ref=e356]:
+              - cell "1-T2600002633" [ref=e357]:
+                - generic [ref=e359] [cursor=pointer]: 1-T2600002633
+              - cell "Payment" [ref=e360]:
+                - generic "Payment" [ref=e364]:
+                  - generic [ref=e366]: Payment
+              - cell "700.00" [ref=e367]:
+                - generic [ref=e369]: "700.00"
+              - cell "test" [ref=e370]:
+                - generic [ref=e372] [cursor=pointer]: test
+              - cell "Anuradha" [ref=e373]:
+                - generic [ref=e374]: Anuradha
+              - cell "2026-03-16 23:28:05" [ref=e375]:
+                - generic [ref=e377]: 2026-03-16 23:28:05
+            - row "1-T2600002632 Payment 400.00 Test Anuradha 2026-03-16 23:08:08" [ref=e378]:
+              - cell "1-T2600002632" [ref=e379]:
+                - generic [ref=e381] [cursor=pointer]: 1-T2600002632
+              - cell "Payment" [ref=e382]:
+                - generic "Payment" [ref=e386]:
+                  - generic [ref=e388]: Payment
+              - cell "400.00" [ref=e389]:
+                - generic [ref=e391]: "400.00"
+              - cell "Test" [ref=e392]:
+                - generic [ref=e394] [cursor=pointer]: Test
+              - cell "Anuradha" [ref=e395]:
+                - generic [ref=e396]: Anuradha
+              - cell "2026-03-16 23:08:08" [ref=e397]:
+                - generic [ref=e399]: 2026-03-16 23:08:08
+            - row "1-T2600002631 Payment 200.00 rtgret Anuradha 2026-03-12 23:19:13" [ref=e400]:
+              - cell "1-T2600002631" [ref=e401]:
+                - generic [ref=e403] [cursor=pointer]: 1-T2600002631
+              - cell "Payment" [ref=e404]:
+                - generic "Payment" [ref=e408]:
+                  - generic [ref=e410]: Payment
+              - cell "200.00" [ref=e411]:
+                - generic [ref=e413]: "200.00"
+              - cell "rtgret" [ref=e414]:
+                - generic [ref=e416] [cursor=pointer]: rtgret
+              - cell "Anuradha" [ref=e417]:
+                - generic [ref=e418]: Anuradha
+              - cell "2026-03-12 23:19:13" [ref=e419]:
+                - generic [ref=e421]: 2026-03-12 23:19:13
+            - row "1-T2600002628 Payment 1,200.00 anuradha Anuradha 2026-03-10 23:48:56" [ref=e422]:
+              - cell "1-T2600002628" [ref=e423]:
+                - generic [ref=e425] [cursor=pointer]: 1-T2600002628
+              - cell "Payment" [ref=e426]:
+                - generic "Payment" [ref=e430]:
+                  - generic [ref=e432]: Payment
+              - cell "1,200.00" [ref=e433]:
+                - generic [ref=e435]: 1,200.00
+              - cell "anuradha" [ref=e436]:
+                - generic [ref=e438] [cursor=pointer]: anuradha
+              - cell "Anuradha" [ref=e439]:
+                - generic [ref=e440]: Anuradha
+              - cell "2026-03-10 23:48:56" [ref=e441]:
+                - generic [ref=e443]: 2026-03-10 23:48:56
+            - row "1-T2600002627 Payment 400.00 Water board Anuradha 2026-03-10 23:14:24" [ref=e444]:
+              - cell "1-T2600002627" [ref=e445]:
+                - generic [ref=e447] [cursor=pointer]: 1-T2600002627
+              - cell "Payment" [ref=e448]:
+                - generic "Payment" [ref=e452]:
+                  - generic [ref=e454]: Payment
+              - cell "400.00" [ref=e455]:
+                - generic [ref=e457]: "400.00"
+              - cell "Water board" [ref=e458]:
+                - generic [ref=e460] [cursor=pointer]: Water board
+              - cell "Anuradha" [ref=e461]:
+                - generic [ref=e462]: Anuradha
+              - cell "2026-03-10 23:14:24" [ref=e463]:
+                - generic [ref=e465]: 2026-03-10 23:14:24
+            - row "1-T2600002622 Payment 700.00 - Anuradha 2026-03-10 01:01:16" [ref=e466]:
+              - cell "1-T2600002622" [ref=e467]:
+                - generic [ref=e469] [cursor=pointer]: 1-T2600002622
+              - cell "Payment" [ref=e470]:
+                - generic "Payment" [ref=e474]:
+                  - generic [ref=e476]: Payment
+              - cell "700.00" [ref=e477]:
+                - generic [ref=e479]: "700.00"
+              - cell "-" [ref=e480]:
+                - generic [ref=e482] [cursor=pointer]: "-"
+              - cell "Anuradha" [ref=e483]:
+                - generic [ref=e484]: Anuradha
+              - cell "2026-03-10 01:01:16" [ref=e485]:
+                - generic [ref=e487]: 2026-03-10 01:01:16
+            - row "1-T2600002617 Payment 2,800.00 - Dev User 2026-03-09 22:57:14" [ref=e488]:
+              - cell "1-T2600002617" [ref=e489]:
+                - generic [ref=e491] [cursor=pointer]: 1-T2600002617
+              - cell "Payment" [ref=e492]:
+                - generic "Payment" [ref=e496]:
+                  - generic [ref=e498]: Payment
+              - cell "2,800.00" [ref=e499]:
+                - generic [ref=e501]: 2,800.00
+              - cell "-" [ref=e502]:
+                - generic [ref=e504] [cursor=pointer]: "-"
+              - cell "Dev User" [ref=e505]:
+                - generic [ref=e506]: Dev User
+              - cell "2026-03-09 22:57:14" [ref=e507]:
+                - generic [ref=e509]: 2026-03-09 22:57:14
+            - row "1-T2600002616 Payment 2,000.00 test Nilki Ratnayake 2026-03-09 22:13:20" [ref=e510]:
+              - cell "1-T2600002616" [ref=e511]:
+                - generic [ref=e513] [cursor=pointer]: 1-T2600002616
+              - cell "Payment" [ref=e514]:
+                - generic "Payment" [ref=e518]:
+                  - generic [ref=e520]: Payment
+              - cell "2,000.00" [ref=e521]:
+                - generic [ref=e523]: 2,000.00
+              - cell "test" [ref=e524]:
+                - generic [ref=e526] [cursor=pointer]: test
+              - cell "Nilki Ratnayake" [ref=e527]:
+                - generic [ref=e528]: Nilki Ratnayake
+              - cell "2026-03-09 22:13:20" [ref=e529]:
+                - generic [ref=e531]: 2026-03-09 22:13:20
+            - row "1-T2600002612 Payment 500.00 s Nilki Ratnayake 2026-03-09 06:33:32" [ref=e532]:
+              - cell "1-T2600002612" [ref=e533]:
+                - generic [ref=e535] [cursor=pointer]: 1-T2600002612
+              - cell "Payment" [ref=e536]:
+                - generic "Payment" [ref=e540]:
+                  - generic [ref=e542]: Payment
+              - cell "500.00" [ref=e543]:
+                - generic [ref=e545]: "500.00"
+              - cell "s" [ref=e546]:
+                - generic [ref=e548] [cursor=pointer]: s
+              - cell "Nilki Ratnayake" [ref=e549]:
+                - generic [ref=e550]: Nilki Ratnayake
+              - cell "2026-03-09 06:33:32" [ref=e551]:
+                - generic [ref=e553]: 2026-03-09 06:33:32
+            - row "1-T2600002611 Payment 1,000.00 test System Setup Admin 2026-03-09 03:08:40" [ref=e554]:
+              - cell "1-T2600002611" [ref=e555]:
+                - generic [ref=e557] [cursor=pointer]: 1-T2600002611
+              - cell "Payment" [ref=e558]:
+                - generic "Payment" [ref=e562]:
+                  - generic [ref=e564]: Payment
+              - cell "1,000.00" [ref=e565]:
+                - generic [ref=e567]: 1,000.00
+              - cell "test" [ref=e568]:
+                - generic [ref=e570] [cursor=pointer]: test
+              - cell "System Setup Admin" [ref=e571]:
+                - generic [ref=e572]: System Setup Admin
+              - cell "2026-03-09 03:08:40" [ref=e573]:
+                - generic [ref=e575]: 2026-03-09 03:08:40
+            - row "1-T2600002593 Payment 500.00 s Nilki Ratnayake 2026-02-25 05:15:41" [ref=e576]:
+              - cell "1-T2600002593" [ref=e577]:
+                - generic [ref=e579] [cursor=pointer]: 1-T2600002593
+              - cell "Payment" [ref=e580]:
+                - generic "Payment" [ref=e584]:
+                  - generic [ref=e586]: Payment
+              - cell "500.00" [ref=e587]:
+                - generic [ref=e589]: "500.00"
+              - cell "s" [ref=e590]:
+                - generic [ref=e592] [cursor=pointer]: s
+              - cell "Nilki Ratnayake" [ref=e593]:
+                - generic [ref=e594]: Nilki Ratnayake
+              - cell "2026-02-25 05:15:41" [ref=e595]:
+                - generic [ref=e597]: 2026-02-25 05:15:41
+            - row "1-T260002558 Payment 5,803.00 DEVELOPMENT cOMMITEE Lalani 2026-02-19 06:57:14" [ref=e598]:
+              - cell "1-T260002558" [ref=e599]:
+                - generic [ref=e601] [cursor=pointer]: 1-T260002558
+              - cell "Payment" [ref=e602]:
+                - generic "Payment" [ref=e606]:
+                  - generic [ref=e608]: Payment
+              - cell "5,803.00" [ref=e609]:
+                - generic [ref=e611]: 5,803.00
+              - cell "DEVELOPMENT cOMMITEE" [ref=e612]:
+                - generic [ref=e614] [cursor=pointer]: DEVELOPMENT cOMMITEE
+              - cell "Lalani" [ref=e615]:
+                - generic [ref=e616]: Lalani
+              - cell "2026-02-19 06:57:14" [ref=e617]:
+                - generic [ref=e619]: 2026-02-19 06:57:14
+            - row "1-T260002557 Payment 3,000,000.00 Homagama Lalani 2026-02-19 06:18:20" [ref=e620]:
+              - cell "1-T260002557" [ref=e621]:
+                - generic [ref=e623] [cursor=pointer]: 1-T260002557
+              - cell "Payment" [ref=e624]:
+                - generic "Payment" [ref=e628]:
+                  - generic [ref=e630]: Payment
+              - cell "3,000,000.00" [ref=e631]:
+                - generic [ref=e633]: 3,000,000.00
+              - cell "Homagama" [ref=e634]:
+                - generic [ref=e636] [cursor=pointer]: Homagama
+              - cell "Lalani" [ref=e637]:
+                - generic [ref=e638]: Lalani
+              - cell "2026-02-19 06:18:20" [ref=e639]:
+                - generic [ref=e641]: 2026-02-19 06:18:20
+            - row "1-T260002556 Payment 1,000,000.00 Kesbewa Lalani 2026-02-19 06:15:41" [ref=e642]:
+              - cell "1-T260002556" [ref=e643]:
+                - generic [ref=e645] [cursor=pointer]: 1-T260002556
+              - cell "Payment" [ref=e646]:
+                - generic "Payment" [ref=e650]:
+                  - generic [ref=e652]: Payment
+              - cell "1,000,000.00" [ref=e653]:
+                - generic [ref=e655]: 1,000,000.00
+              - cell "Kesbewa" [ref=e656]:
+                - generic [ref=e658] [cursor=pointer]: Kesbewa
+              - cell "Lalani" [ref=e659]:
+                - generic [ref=e660]: Lalani
+              - cell "2026-02-19 06:15:41" [ref=e661]:
+                - generic [ref=e663]: 2026-02-19 06:15:41
+            - row "1-T260002540 Payment 150,000.00 Deepika Karasinha Thushara 2026-02-18 10:45:31" [ref=e664]:
+              - cell "1-T260002540" [ref=e665]:
+                - generic [ref=e667] [cursor=pointer]: 1-T260002540
+              - cell "Payment" [ref=e668]:
+                - generic "Payment" [ref=e672]:
+                  - generic [ref=e674]: Payment
+              - cell "150,000.00" [ref=e675]:
+                - generic [ref=e677]: 150,000.00
+              - cell "Deepika Karasinha" [ref=e678]:
+                - generic [ref=e680] [cursor=pointer]: Deepika Karasinha
+              - cell "Thushara" [ref=e681]:
+                - generic [ref=e682]: Thushara
+              - cell "2026-02-18 10:45:31" [ref=e683]:
+                - generic [ref=e685]: 2026-02-18 10:45:31
+            - row "1-T260002539 Payment 95,874.33 co-opertiv insurance Thushara 2026-02-18 10:15:16" [ref=e686]:
+              - cell "1-T260002539" [ref=e687]:
+                - generic [ref=e689] [cursor=pointer]: 1-T260002539
+              - cell "Payment" [ref=e690]:
+                - generic "Payment" [ref=e694]:
+                  - generic [ref=e696]: Payment
+              - cell "95,874.33" [ref=e697]:
+                - generic [ref=e699]: 95,874.33
+              - cell "co-opertiv insurance" [ref=e700]:
+                - generic [ref=e702] [cursor=pointer]: co-opertiv insurance
+              - cell "Thushara" [ref=e703]:
+                - generic [ref=e704]: Thushara
+              - cell "2026-02-18 10:15:16" [ref=e705]:
+                - generic [ref=e707]: 2026-02-18 10:15:16
+            - row "4-T260000332 Payment 244,611.05 . Chandrani 2026-02-18 09:53:37" [ref=e708]:
+              - cell "4-T260000332" [ref=e709]:
+                - generic [ref=e711] [cursor=pointer]: 4-T260000332
+              - cell "Payment" [ref=e712]:
+                - generic "Payment" [ref=e716]:
+                  - generic [ref=e718]: Payment
+              - cell "244,611.05" [ref=e719]:
+                - generic [ref=e721]: 244,611.05
+              - cell "." [ref=e722]:
+                - generic [ref=e724] [cursor=pointer]: .
+              - cell "Chandrani" [ref=e725]:
+                - generic [ref=e726]: Chandrani
+              - cell "2026-02-18 09:53:37" [ref=e727]:
+                - generic [ref=e729]: 2026-02-18 09:53:37
+            - row "4-T260000331 Payment 5,500,000.00 . Chandrani 2026-02-18 09:52:04" [ref=e730]:
+              - cell "4-T260000331" [ref=e731]:
+                - generic [ref=e733] [cursor=pointer]: 4-T260000331
+              - cell "Payment" [ref=e734]:
+                - generic "Payment" [ref=e738]:
+                  - generic [ref=e740]: Payment
+              - cell "5,500,000.00" [ref=e741]:
+                - generic [ref=e743]: 5,500,000.00
+              - cell "." [ref=e744]:
+                - generic [ref=e746] [cursor=pointer]: .
+              - cell "Chandrani" [ref=e747]:
+                - generic [ref=e748]: Chandrani
+              - cell "2026-02-18 09:52:04" [ref=e749]:
+                - generic [ref=e751]: 2026-02-18 09:52:04
+            - row "1-T260002507 Payment 21,400.00 Jayawardanapura Campas Kamani 2026-02-18 08:22:23" [ref=e752]:
+              - cell "1-T260002507" [ref=e753]:
+                - generic [ref=e755] [cursor=pointer]: 1-T260002507
+              - cell "Payment" [ref=e756]:
+                - generic "Payment" [ref=e760]:
+                  - generic [ref=e762]: Payment
+              - cell "21,400.00" [ref=e763]:
+                - generic [ref=e765]: 21,400.00
+              - cell "Jayawardanapura Campas" [ref=e766]:
+                - generic [ref=e768] [cursor=pointer]: Jayawardanapura Campas
+              - cell "Kamani" [ref=e769]:
+                - generic [ref=e770]: Kamani
+              - cell "2026-02-18 08:22:23" [ref=e771]:
+                - generic [ref=e773]: 2026-02-18 08:22:23
+            - row "1-T260002469 Payment 18,000.00 Alpha Industries Lalani 2026-02-17 09:50:47" [ref=e774]:
+              - cell "1-T260002469" [ref=e775]:
+                - generic [ref=e777] [cursor=pointer]: 1-T260002469
+              - cell "Payment" [ref=e778]:
+                - generic "Payment" [ref=e782]:
+                  - generic [ref=e784]: Payment
+              - cell "18,000.00" [ref=e785]:
+                - generic [ref=e787]: 18,000.00
+              - cell "Alpha Industries" [ref=e788]:
+                - generic [ref=e790] [cursor=pointer]: Alpha Industries
+              - cell "Lalani" [ref=e791]:
+                - generic [ref=e792]: Lalani
+              - cell "2026-02-17 09:50:47" [ref=e793]:
+                - generic [ref=e795]: 2026-02-17 09:50:47
+            - row "2-T260000579 Payment 12,974.47 . Rasika 2026-02-17 09:41:58" [ref=e796]:
+              - cell "2-T260000579" [ref=e797]:
+                - generic [ref=e799] [cursor=pointer]: 2-T260000579
+              - cell "Payment" [ref=e800]:
+                - generic "Payment" [ref=e804]:
+                  - generic [ref=e806]: Payment
+              - cell "12,974.47" [ref=e807]:
+                - generic [ref=e809]: 12,974.47
+              - cell "." [ref=e810]:
+                - generic [ref=e812] [cursor=pointer]: .
+              - cell "Rasika" [ref=e813]:
+                - generic [ref=e814]: Rasika
+              - cell "2026-02-17 09:41:58" [ref=e815]:
+                - generic [ref=e817]: 2026-02-17 09:41:58
+            - row "1-T260002471 Payment 3,560.00 - Niranjala S 2026-02-17 09:33:58" [ref=e818]:
+              - cell "1-T260002471" [ref=e819]:
+                - generic [ref=e821] [cursor=pointer]: 1-T260002471
+              - cell "Payment" [ref=e822]:
+                - generic "Payment" [ref=e826]:
+                  - generic [ref=e828]: Payment
+              - cell "3,560.00" [ref=e829]:
+                - generic [ref=e831]: 3,560.00
+              - cell "-" [ref=e832]:
+                - generic [ref=e834] [cursor=pointer]: "-"
+              - cell "Niranjala S" [ref=e835]:
+                - generic [ref=e836]: Niranjala S
+              - cell "2026-02-17 09:33:58" [ref=e837]:
+                - generic [ref=e839]: 2026-02-17 09:33:58
+            - row "1-T260002470 Payment 10,000.00 sriyani Niranjala S 2026-02-17 09:32:34" [ref=e840]:
+              - cell "1-T260002470" [ref=e841]:
+                - generic [ref=e843] [cursor=pointer]: 1-T260002470
+              - cell "Payment" [ref=e844]:
+                - generic "Payment" [ref=e848]:
+                  - generic [ref=e850]: Payment
+              - cell "10,000.00" [ref=e851]:
+                - generic [ref=e853]: 10,000.00
+              - cell "sriyani" [ref=e854]:
+                - generic [ref=e856] [cursor=pointer]: sriyani
+              - cell "Niranjala S" [ref=e857]:
+                - generic [ref=e858]: Niranjala S
+              - cell "2026-02-17 09:32:34" [ref=e859]:
+                - generic [ref=e861]: 2026-02-17 09:32:34
+            - row "1-T260002468 Payment 2,000.00 sriyani Niranjala S 2026-02-17 09:31:17" [ref=e862]:
+              - cell "1-T260002468" [ref=e863]:
+                - generic [ref=e865] [cursor=pointer]: 1-T260002468
+              - cell "Payment" [ref=e866]:
+                - generic "Payment" [ref=e870]:
+                  - generic [ref=e872]: Payment
+              - cell "2,000.00" [ref=e873]:
+                - generic [ref=e875]: 2,000.00
+              - cell "sriyani" [ref=e876]:
+                - generic [ref=e878] [cursor=pointer]: sriyani
+              - cell "Niranjala S" [ref=e879]:
+                - generic [ref=e880]: Niranjala S
+              - cell "2026-02-17 09:31:17" [ref=e881]:
+                - generic [ref=e883]: 2026-02-17 09:31:17
+            - row "1-T260002464 Payment 2,500.00 Madampe Sriyani Lalani 2026-02-17 09:20:49" [ref=e884]:
+              - cell "1-T260002464" [ref=e885]:
+                - generic [ref=e887] [cursor=pointer]: 1-T260002464
+              - cell "Payment" [ref=e888]:
+                - generic "Payment" [ref=e892]:
+                  - generic [ref=e894]: Payment
+              - cell "2,500.00" [ref=e895]:
+                - generic [ref=e897]: 2,500.00
+              - cell "Madampe Sriyani" [ref=e898]:
+                - generic [ref=e900] [cursor=pointer]: Madampe Sriyani
+              - cell "Lalani" [ref=e901]:
+                - generic [ref=e902]: Lalani
+              - cell "2026-02-17 09:20:49" [ref=e903]:
+                - generic [ref=e905]: 2026-02-17 09:20:49
+            - row "2-T260000575 Payment 1,486,500.00 . Rasika 2026-02-17 08:52:39" [ref=e906]:
+              - cell "2-T260000575" [ref=e907]:
+                - generic [ref=e909] [cursor=pointer]: 2-T260000575
+              - cell "Payment" [ref=e910]:
+                - generic "Payment" [ref=e914]:
+                  - generic [ref=e916]: Payment
+              - cell "1,486,500.00" [ref=e917]:
+                - generic [ref=e919]: 1,486,500.00
+              - cell "." [ref=e920]:
+                - generic [ref=e922] [cursor=pointer]: .
+              - cell "Rasika" [ref=e923]:
+                - generic [ref=e924]: Rasika
+              - cell "2026-02-17 08:52:39" [ref=e925]:
+                - generic [ref=e927]: 2026-02-17 08:52:39
+            - row "1-T260002460 Payment 1,500,000.00 Hanwella Lalani 2026-02-17 07:27:27" [ref=e928]:
+              - cell "1-T260002460" [ref=e929]:
+                - generic [ref=e931] [cursor=pointer]: 1-T260002460
+              - cell "Payment" [ref=e932]:
+                - generic "Payment" [ref=e936]:
+                  - generic [ref=e938]: Payment
+              - cell "1,500,000.00" [ref=e939]:
+                - generic [ref=e941]: 1,500,000.00
+              - cell "Hanwella" [ref=e942]:
+                - generic [ref=e944] [cursor=pointer]: Hanwella
+              - cell "Lalani" [ref=e945]:
+                - generic [ref=e946]: Lalani
+              - cell "2026-02-17 07:27:27" [ref=e947]:
+                - generic [ref=e949]: 2026-02-17 07:27:27
+            - row "1-T260002440 Payment 4,000,000.00 nalaka Niranjala S 2026-02-17 06:13:32" [ref=e950]:
+              - cell "1-T260002440" [ref=e951]:
+                - generic [ref=e953] [cursor=pointer]: 1-T260002440
+              - cell "Payment" [ref=e954]:
+                - generic "Payment" [ref=e958]:
+                  - generic [ref=e960]: Payment
+              - cell "4,000,000.00" [ref=e961]:
+                - generic [ref=e963]: 4,000,000.00
+              - cell "nalaka" [ref=e964]:
+                - generic [ref=e966] [cursor=pointer]: nalaka
+              - cell "Niranjala S" [ref=e967]:
+                - generic [ref=e968]: Niranjala S
+              - cell "2026-02-17 06:13:32" [ref=e969]:
+                - generic [ref=e971]: 2026-02-17 06:13:32
+            - row "1-T260002437 Payment 8,500.00 Chandrani Niranjala S 2026-02-17 04:58:56" [ref=e972]:
+              - cell "1-T260002437" [ref=e973]:
+                - generic [ref=e975] [cursor=pointer]: 1-T260002437
+              - cell "Payment" [ref=e976]:
+                - generic "Payment" [ref=e980]:
+                  - generic [ref=e982]: Payment
+              - cell "8,500.00" [ref=e983]:
+                - generic [ref=e985]: 8,500.00
+              - cell "Chandrani" [ref=e986]:
+                - generic [ref=e988] [cursor=pointer]: Chandrani
+              - cell "Niranjala S" [ref=e989]:
+                - generic [ref=e990]: Niranjala S
+              - cell "2026-02-17 04:58:56" [ref=e991]:
+                - generic [ref=e993]: 2026-02-17 04:58:56
+            - row "1-T260002436 Payment 1,500,000.00 kolonnawa branch Niranjala S 2026-02-17 04:55:45" [ref=e994]:
+              - cell "1-T260002436" [ref=e995]:
+                - generic [ref=e997] [cursor=pointer]: 1-T260002436
+              - cell "Payment" [ref=e998]:
+                - generic "Payment" [ref=e1002]:
+                  - generic [ref=e1004]: Payment
+              - cell "1,500,000.00" [ref=e1005]:
+                - generic [ref=e1007]: 1,500,000.00
+              - cell "kolonnawa branch" [ref=e1008]:
+                - generic [ref=e1010] [cursor=pointer]: kolonnawa branch
+              - cell "Niranjala S" [ref=e1011]:
+                - generic [ref=e1012]: Niranjala S
+              - cell "2026-02-17 04:55:45" [ref=e1013]:
+                - generic [ref=e1015]: 2026-02-17 04:55:45
+            - row "3-T260000885 Payment 115,830.00 . Priyadarshi 2026-02-16 10:08:04" [ref=e1016]:
+              - cell "3-T260000885" [ref=e1017]:
+                - generic [ref=e1019] [cursor=pointer]: 3-T260000885
+              - cell "Payment" [ref=e1020]:
+                - generic "Payment" [ref=e1024]:
+                  - generic [ref=e1026]: Payment
+              - cell "115,830.00" [ref=e1027]:
+                - generic [ref=e1029]: 115,830.00
+              - cell "." [ref=e1030]:
+                - generic [ref=e1032] [cursor=pointer]: .
+              - cell "Priyadarshi" [ref=e1033]:
+                - generic [ref=e1034]: Priyadarshi
+              - cell "2026-02-16 10:08:04" [ref=e1035]:
+                - generic [ref=e1037]: 2026-02-16 10:08:04
+            - row "1-T260002405 Payment 4,910.00 Takeway Thushara 2026-02-16 09:29:13" [ref=e1038]:
+              - cell "1-T260002405" [ref=e1039]:
+                - generic [ref=e1041] [cursor=pointer]: 1-T260002405
+              - cell "Payment" [ref=e1042]:
+                - generic "Payment" [ref=e1046]:
+                  - generic [ref=e1048]: Payment
+              - cell "4,910.00" [ref=e1049]:
+                - generic [ref=e1051]: 4,910.00
+              - cell "Takeway" [ref=e1052]:
+                - generic [ref=e1054] [cursor=pointer]: Takeway
+              - cell "Thushara" [ref=e1055]:
+                - generic [ref=e1056]: Thushara
+              - cell "2026-02-16 09:29:13" [ref=e1057]:
+                - generic [ref=e1059]: 2026-02-16 09:29:13
+            - row "1-T260002402 Payment 1,800.00 peoplse Bank Thushara 2026-02-16 08:39:32" [ref=e1060]:
+              - cell "1-T260002402" [ref=e1061]:
+                - generic [ref=e1063] [cursor=pointer]: 1-T260002402
+              - cell "Payment" [ref=e1064]:
+                - generic "Payment" [ref=e1068]:
+                  - generic [ref=e1070]: Payment
+              - cell "1,800.00" [ref=e1071]:
+                - generic [ref=e1073]: 1,800.00
+              - cell "peoplse Bank" [ref=e1074]:
+                - generic [ref=e1076] [cursor=pointer]: peoplse Bank
+              - cell "Thushara" [ref=e1077]:
+                - generic [ref=e1078]: Thushara
+              - cell "2026-02-16 08:39:32" [ref=e1079]:
+                - generic [ref=e1081]: 2026-02-16 08:39:32
+            - row "1-T260002397 Payment 3,750.00 Finace Comity Thushara 2026-02-16 06:36:36" [ref=e1082]:
+              - cell "1-T260002397" [ref=e1083]:
+                - generic [ref=e1085] [cursor=pointer]: 1-T260002397
+              - cell "Payment" [ref=e1086]:
+                - generic "Payment" [ref=e1090]:
+                  - generic [ref=e1092]: Payment
+              - cell "3,750.00" [ref=e1093]:
+                - generic [ref=e1095]: 3,750.00
+              - cell "Finace Comity" [ref=e1096]:
+                - generic [ref=e1098] [cursor=pointer]: Finace Comity
+              - cell "Thushara" [ref=e1099]:
+                - generic [ref=e1100]: Thushara
+              - cell "2026-02-16 06:36:36" [ref=e1101]:
+                - generic [ref=e1103]: 2026-02-16 06:36:36
+            - row "2-T260000558 Payment 23,000.00 . Rasika 2026-02-16 03:57:29" [ref=e1104]:
+              - cell "2-T260000558" [ref=e1105]:
+                - generic [ref=e1107] [cursor=pointer]: 2-T260000558
+              - cell "Payment" [ref=e1108]:
+                - generic "Payment" [ref=e1112]:
+                  - generic [ref=e1114]: Payment
+              - cell "23,000.00" [ref=e1115]:
+                - generic [ref=e1117]: 23,000.00
+              - cell "." [ref=e1118]:
+                - generic [ref=e1120] [cursor=pointer]: .
+              - cell "Rasika" [ref=e1121]:
+                - generic [ref=e1122]: Rasika
+              - cell "2026-02-16 03:57:29" [ref=e1123]:
+                - generic [ref=e1125]: 2026-02-16 03:57:29
+            - row "1-T260002378 Payment 4,030.00 Asurance comity Thushara 2026-02-15 09:30:38" [ref=e1126]:
+              - cell "1-T260002378" [ref=e1127]:
+                - generic [ref=e1129] [cursor=pointer]: 1-T260002378
+              - cell "Payment" [ref=e1130]:
+                - generic "Payment" [ref=e1134]:
+                  - generic [ref=e1136]: Payment
+              - cell "4,030.00" [ref=e1137]:
+                - generic [ref=e1139]: 4,030.00
+              - cell "Asurance comity" [ref=e1140]:
+                - generic [ref=e1142] [cursor=pointer]: Asurance comity
+              - cell "Thushara" [ref=e1143]:
+                - generic [ref=e1144]: Thushara
+              - cell "2026-02-15 09:30:38" [ref=e1145]:
+                - generic [ref=e1147]: 2026-02-15 09:30:38
+            - row "1-T260002350 Payment 13,924.00 . American Premium Water Systems Thushara 2026-02-15 06:53:38" [ref=e1148]:
+              - cell "1-T260002350" [ref=e1149]:
+                - generic [ref=e1151] [cursor=pointer]: 1-T260002350
+              - cell "Payment" [ref=e1152]:
+                - generic "Payment" [ref=e1156]:
+                  - generic [ref=e1158]: Payment
+              - cell "13,924.00" [ref=e1159]:
+                - generic [ref=e1161]: 13,924.00
+              - cell ". American Premium Water Systems" [ref=e1162]:
+                - generic [ref=e1164] [cursor=pointer]: . American Premium Water Systems
+              - cell "Thushara" [ref=e1165]:
+                - generic [ref=e1166]: Thushara
+              - cell "2026-02-15 06:53:38" [ref=e1167]:
+                - generic [ref=e1169]: 2026-02-15 06:53:38
+            - row "1-T260002346 Payment 3,800.00 Mharagama Branch Thushara 2026-02-15 04:10:56" [ref=e1170]:
+              - cell "1-T260002346" [ref=e1171]:
+                - generic [ref=e1173] [cursor=pointer]: 1-T260002346
+              - cell "Payment" [ref=e1174]:
+                - generic "Payment" [ref=e1178]:
+                  - generic [ref=e1180]: Payment
+              - cell "3,800.00" [ref=e1181]:
+                - generic [ref=e1183]: 3,800.00
+              - cell "Mharagama Branch" [ref=e1184]:
+                - generic [ref=e1186] [cursor=pointer]: Mharagama Branch
+              - cell "Thushara" [ref=e1187]:
+                - generic [ref=e1188]: Thushara
+              - cell "2026-02-15 04:10:56" [ref=e1189]:
+                - generic [ref=e1191]: 2026-02-15 04:10:56
+            - row "1-T260002329 Payment 250.00 Rathnasiri kolabage Lalani 2026-02-12 09:56:08" [ref=e1192]:
+              - cell "1-T260002329" [ref=e1193]:
+                - generic [ref=e1195] [cursor=pointer]: 1-T260002329
+              - cell "Payment" [ref=e1196]:
+                - generic "Payment" [ref=e1200]:
+                  - generic [ref=e1202]: Payment
+              - cell "250.00" [ref=e1203]:
+                - generic [ref=e1205]: "250.00"
+              - cell "Rathnasiri kolabage" [ref=e1206]:
+                - generic [ref=e1208] [cursor=pointer]: Rathnasiri kolabage
+              - cell "Lalani" [ref=e1209]:
+                - generic [ref=e1210]: Lalani
+              - cell "2026-02-12 09:56:08" [ref=e1211]:
+                - generic [ref=e1213]: 2026-02-12 09:56:08
+            - row "3-T260000851 Payment 8,878,618.27 . Priyadarshi 2026-02-12 09:54:28" [ref=e1214]:
+              - cell "3-T260000851" [ref=e1215]:
+                - generic [ref=e1217] [cursor=pointer]: 3-T260000851
+              - cell "Payment" [ref=e1218]:
+                - generic "Payment" [ref=e1222]:
+                  - generic [ref=e1224]: Payment
+              - cell "8,878,618.27" [ref=e1225]:
+                - generic [ref=e1227]: 8,878,618.27
+              - cell "." [ref=e1228]:
+                - generic [ref=e1230] [cursor=pointer]: .
+              - cell "Priyadarshi" [ref=e1231]:
+                - generic [ref=e1232]: Priyadarshi
+              - cell "2026-02-12 09:54:28" [ref=e1233]:
+                - generic [ref=e1235]: 2026-02-12 09:54:28
+            - row "1-T260002328 Payment 445.00 Rathnasiri kolabage Lalani 2026-02-12 09:53:25" [ref=e1236]:
+              - cell "1-T260002328" [ref=e1237]:
+                - generic [ref=e1239] [cursor=pointer]: 1-T260002328
+              - cell "Payment" [ref=e1240]:
+                - generic "Payment" [ref=e1244]:
+                  - generic [ref=e1246]: Payment
+              - cell "445.00" [ref=e1247]:
+                - generic [ref=e1249]: "445.00"
+              - cell "Rathnasiri kolabage" [ref=e1250]:
+                - generic [ref=e1252] [cursor=pointer]: Rathnasiri kolabage
+              - cell "Lalani" [ref=e1253]:
+                - generic [ref=e1254]: Lalani
+              - cell "2026-02-12 09:53:25" [ref=e1255]:
+                - generic [ref=e1257]: 2026-02-12 09:53:25
+            - row "3-T260000850 Payment 2,500,000.00 . Priyadarshi 2026-02-12 09:53:05" [ref=e1258]:
+              - cell "3-T260000850" [ref=e1259]:
+                - generic [ref=e1261] [cursor=pointer]: 3-T260000850
+              - cell "Payment" [ref=e1262]:
+                - generic "Payment" [ref=e1266]:
+                  - generic [ref=e1268]: Payment
+              - cell "2,500,000.00" [ref=e1269]:
+                - generic [ref=e1271]: 2,500,000.00
+              - cell "." [ref=e1272]:
+                - generic [ref=e1274] [cursor=pointer]: .
+              - cell "Priyadarshi" [ref=e1275]:
+                - generic [ref=e1276]: Priyadarshi
+              - cell "2026-02-12 09:53:05" [ref=e1277]:
+                - generic [ref=e1279]: 2026-02-12 09:53:05
+            - row "1-T260002324 Payment 129,500.00 Elcardo Industries Lalani 2026-02-12 09:31:21" [ref=e1280]:
+              - cell "1-T260002324" [ref=e1281]:
+                - generic [ref=e1283] [cursor=pointer]: 1-T260002324
+              - cell "Payment" [ref=e1284]:
+                - generic "Payment" [ref=e1288]:
+                  - generic [ref=e1290]: Payment
+              - cell "129,500.00" [ref=e1291]:
+                - generic [ref=e1293]: 129,500.00
+              - cell "Elcardo Industries" [ref=e1294]:
+                - generic [ref=e1296] [cursor=pointer]: Elcardo Industries
+              - cell "Lalani" [ref=e1297]:
+                - generic [ref=e1298]: Lalani
+              - cell "2026-02-12 09:31:21" [ref=e1299]:
+                - generic [ref=e1301]: 2026-02-12 09:31:21
+            - row "1-T260002282 Payment 78,018.75 D.R.Industries Lalani 2026-02-12 06:34:27" [ref=e1302]:
+              - cell "1-T260002282" [ref=e1303]:
+                - generic [ref=e1305] [cursor=pointer]: 1-T260002282
+              - cell "Payment" [ref=e1306]:
+                - generic "Payment" [ref=e1310]:
+                  - generic [ref=e1312]: Payment
+              - cell "78,018.75" [ref=e1313]:
+                - generic [ref=e1315]: 78,018.75
+              - cell "D.R.Industries" [ref=e1316]:
+                - generic [ref=e1318] [cursor=pointer]: D.R.Industries
+              - cell "Lalani" [ref=e1319]:
+                - generic [ref=e1320]: Lalani
+              - cell "2026-02-12 06:34:27" [ref=e1321]:
+                - generic [ref=e1323]: 2026-02-12 06:34:27
+            - row "1-T260002262 Payment 9,000.00 Jayalath Koralage Lalani 2026-02-11 09:50:10" [ref=e1324]:
+              - cell "1-T260002262" [ref=e1325]:
+                - generic [ref=e1327] [cursor=pointer]: 1-T260002262
+              - cell "Payment" [ref=e1328]:
+                - generic "Payment" [ref=e1332]:
+                  - generic [ref=e1334]: Payment
+              - cell "9,000.00" [ref=e1335]:
+                - generic [ref=e1337]: 9,000.00
+              - cell "Jayalath Koralage" [ref=e1338]:
+                - generic [ref=e1340] [cursor=pointer]: Jayalath Koralage
+              - cell "Lalani" [ref=e1341]:
+                - generic [ref=e1342]: Lalani
+              - cell "2026-02-11 09:50:10" [ref=e1343]:
+                - generic [ref=e1345]: 2026-02-11 09:50:10
+            - row "1-T260002261 Payment 11,780.00 Rathnasiri Kolabage Lalani 2026-02-11 09:48:07" [ref=e1346]:
+              - cell "1-T260002261" [ref=e1347]:
+                - generic [ref=e1349] [cursor=pointer]: 1-T260002261
+              - cell "Payment" [ref=e1350]:
+                - generic "Payment" [ref=e1354]:
+                  - generic [ref=e1356]: Payment
+              - cell "11,780.00" [ref=e1357]:
+                - generic [ref=e1359]: 11,780.00
+              - cell "Rathnasiri Kolabage" [ref=e1360]:
+                - generic [ref=e1362] [cursor=pointer]: Rathnasiri Kolabage
+              - cell "Lalani" [ref=e1363]:
+                - generic [ref=e1364]: Lalani
+              - cell "2026-02-11 09:48:07" [ref=e1365]:
+                - generic [ref=e1367]: 2026-02-11 09:48:07
+            - row "3-T260000831 Payment 29,357.00 . Priyadarshi 2026-02-11 09:21:22" [ref=e1368]:
+              - cell "3-T260000831" [ref=e1369]:
+                - generic [ref=e1371] [cursor=pointer]: 3-T260000831
+              - cell "Payment" [ref=e1372]:
+                - generic "Payment" [ref=e1376]:
+                  - generic [ref=e1378]: Payment
+              - cell "29,357.00" [ref=e1379]:
+                - generic [ref=e1381]: 29,357.00
+              - cell "." [ref=e1382]:
+                - generic [ref=e1384] [cursor=pointer]: .
+              - cell "Priyadarshi" [ref=e1385]:
+                - generic [ref=e1386]: Priyadarshi
+              - cell "2026-02-11 09:21:22" [ref=e1387]:
+                - generic [ref=e1389]: 2026-02-11 09:21:22
+            - row "4-T260000274 Payment 2,510,000.00 . Chandrani 2026-02-11 09:11:46" [ref=e1390]:
+              - cell "4-T260000274" [ref=e1391]:
+                - generic [ref=e1393] [cursor=pointer]: 4-T260000274
+              - cell "Payment" [ref=e1394]:
+                - generic "Payment" [ref=e1398]:
+                  - generic [ref=e1400]: Payment
+              - cell "2,510,000.00" [ref=e1401]:
+                - generic [ref=e1403]: 2,510,000.00
+              - cell "." [ref=e1404]:
+                - generic [ref=e1406] [cursor=pointer]: .
+              - cell "Chandrani" [ref=e1407]:
+                - generic [ref=e1408]: Chandrani
+              - cell "2026-02-11 09:11:46" [ref=e1409]:
+                - generic [ref=e1411]: 2026-02-11 09:11:46
+            - row "5-T260000377 Payment 5,000.00 . Priyanga 2026-02-11 09:05:37" [ref=e1412]:
+              - cell "5-T260000377" [ref=e1413]:
+                - generic [ref=e1415] [cursor=pointer]: 5-T260000377
+              - cell "Payment" [ref=e1416]:
+                - generic "Payment" [ref=e1420]:
+                  - generic [ref=e1422]: Payment
+              - cell "5,000.00" [ref=e1423]:
+                - generic [ref=e1425]: 5,000.00
+              - cell "." [ref=e1426]:
+                - generic [ref=e1428] [cursor=pointer]: .
+              - cell "Priyanga" [ref=e1429]:
+                - generic [ref=e1430]: Priyanga
+              - cell "2026-02-11 09:05:37" [ref=e1431]:
+                - generic [ref=e1433]: 2026-02-11 09:05:37
+      - button [ref=e1434] [cursor=pointer]:
+        - img [ref=e1435]
+    - generic [ref=e1438]: © 2026 AIB Bank Web • All rights reserved to Colombo District TCCS Union Ltd. In Sri Lanka.
+  - generic [ref=e1441]:
+    - generic [ref=e1442]:
+      - generic [ref=e1444]: ✅
+      - generic [ref=e1446]: Cashier signed off successfully
+    - button "✕" [ref=e1448] [cursor=pointer]
+```

@@ -5,6 +5,7 @@ import { TestData } from '../utils/testData';
 test('TC01 - Login With Valid Credentials And Cashier Sign In', async ({ page }) => {
   const loginPage = new LoginPage(page);
 
+
   await page.goto('/login');
 
   const { username, password } = TestData.validUser;
@@ -16,4 +17,6 @@ test('TC01 - Login With Valid Credentials And Cashier Sign In', async ({ page })
 
   await loginPage.cashierSignIn(cashBook, openingCashAmount);
   await loginPage.validateSigninSuccess();
+
 });
+ 
