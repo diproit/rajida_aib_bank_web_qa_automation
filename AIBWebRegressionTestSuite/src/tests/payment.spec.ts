@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { PaymentPage } from '../features/pages/PaymentPage';
 import { TestData } from '../utils/testData';
 
-test('TC01 - Payment', async ({ page }) => {
+test('TC02 - Payment Transaction', async ({ page }) => {
   const paymentPage = new PaymentPage(page);
 
   await page.goto('/transactions/payment');

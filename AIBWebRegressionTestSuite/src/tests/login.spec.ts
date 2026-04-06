@@ -18,5 +18,9 @@ test('TC01 - Login With Valid Credentials And Cashier Sign In', async ({ page })
   await loginPage.cashierSignIn(cashBook, openingCashAmount);
   await loginPage.validateSigninSuccess();
 
+  
+
 });
+
+
  
