@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "access_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDciLCJleHAiOjE3NzU1NDgxNTQsInR5cGUiOiJhY2Nlc3MifQ.lln5TAgO8PUrWk9-AHTQfPdbC-rd7k7yNaHS7B5R3p4",
+      "domain": "qaaibweb.aibanker.cloud",
+      "path": "/",
+      "expires": 1775548154.797209,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "refresh_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDciLCJleHAiOjE3NzYxNTExNTQsInR5cGUiOiJyZWZyZXNoIn0.rxvJIqyYKDSVC8y2qpE7LlsFoFToHWca63U_KA1eIgk",
+      "domain": "qaaibweb.aibanker.cloud",
+      "path": "/",
+      "expires": 1776151154.797893,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

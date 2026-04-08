@@ -11,8 +11,6 @@ export class ReceiptPage {
   readonly update: Locator;
   readonly receiptSuccessMessage: Locator;
 
-  
-
   constructor(page: Page) {
     this.page = page;
 

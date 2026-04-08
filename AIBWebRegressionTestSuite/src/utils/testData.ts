@@ -16,9 +16,16 @@ export const TestData = {
   },
 
   payment:{
-    accountName:'Travelling Expenses',
+    accountName:'Electracity Bill Expenses',
     payTo:'Test Automation',
     description:'Test Automation',
     amount:'3000'
+  },
+
+  withdrawal:{
+    customerNumber: '1M0051',
+    accountNumberValue: '102921', //Add the pl_account.id of the account to select//004-10062
+    amount: '2000'
   }
+
 };

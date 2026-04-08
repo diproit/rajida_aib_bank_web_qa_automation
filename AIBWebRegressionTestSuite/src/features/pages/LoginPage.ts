@@ -28,6 +28,10 @@ export class LoginPage {
     this.successMessage = page.getByText('Cashier Signed In Successfully');
   }
 
+  async loadpage() {
+    await this.page.goto('/');
+  }
+
   async login(username: string, password: string) {
     await this.username.fill(username);
     await this.password.fill(password);

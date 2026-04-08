@@ -25,9 +25,18 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
   },
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+  {
+    name: 'setup',
+    testMatch: /.*login\.spec\.ts/, // ✅ FIXED (regex, not string)
+    use: { ...devices['Desktop Chrome'] },
+  },
+  {
+    name: 'chromium',
+    use: { 
+      ...devices['Desktop Chrome'],
+      storageState: 'storageState.json', // ✅ Step 2 applied here
     },
-  ],
+    dependencies: ['setup'], // ✅ ensures login runs first
+  },
+],
 });

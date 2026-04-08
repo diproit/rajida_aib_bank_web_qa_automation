@@ -34,7 +34,7 @@ export class PaymentPage {
     this.description = page.getByRole('textbox', { name: 'Description' });
     this.amount = page.getByPlaceholder('0.00');
     this.sendToApproval = page.getByRole('button', { name: 'Send to Approval' });
-    this.paymentSuccessMessage = page.getByText('Transactions saved with', { exact: false });
+    this.paymentSuccessMessage = page.getByText('Transactions saved with No');
 
     // Approval Locators
     this.approvalTab = page.getByRole('menuitem', { name: 'Approvals' });
@@ -81,16 +81,17 @@ export class PaymentPage {
   }
 
   // Approve payment method
-  async approvePayment() {
+  async approvePayment(description: string) {
     await this.transactionsMenu.click();
     await this.approvalTab.click();
     await this.page.waitForTimeout(3000);
     await this.allSections.click();
     await this.paymentTxn.click();
     await this.page.waitForTimeout(3000);
-    const txnElement = this.page.getByText(/-T\d+/).first();
-    this.clickedTxnNo = await txnElement.textContent() || '';
-    await txnElement.click();
+    // Find and click the first payment row with the matching description
+    const paymentRow = this.page.getByRole('row').filter({ hasText: description }).first();
+    this.clickedTxnNo = await paymentRow.getByText(/-T\d+/).textContent() || '';
+    await paymentRow.click();
     await this.page.waitForTimeout(3000);
     await this.approveBtn.click();
   }

@@ -1,26 +1,18 @@
-import { test } from '@playwright/test';
-import { LoginPage } from '../features/pages/LoginPage';
+import { test } from '../fixtures/auth.fixture';
 import { TestData } from '../utils/testData';
 
-test('TC01 - Login With Valid Credentials And Cashier Sign In', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-
-
-  await page.goto('/login');
-
+test('TC01 - Login With Valid Credentials And Cashier Sign In', async ({ login, page }) => {
   const { username, password } = TestData.validUser;
 
-  await loginPage.login(username, password);
-  await loginPage.validateLoginSuccess();
+  await login.loadpage(); // Load page at test start
+  await login.login(username, password);
+  await login.validateLoginSuccess();
 
   const { cashBook, openingCashAmount } = TestData.cashier;
 
-  await loginPage.cashierSignIn(cashBook, openingCashAmount);
-  await loginPage.validateSigninSuccess();
+  await login.cashierSignIn(cashBook, openingCashAmount);
+  await login.validateSigninSuccess();
 
-  
-
+  //Save logged-in state
+  await page.context().storageState({ path: 'storageState.json' });
 });
-
-
- 
