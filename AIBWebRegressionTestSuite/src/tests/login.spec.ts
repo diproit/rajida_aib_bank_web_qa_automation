@@ -1,7 +1,7 @@
 import { test } from '../fixtures/auth.fixture';
 import { TestData } from '../utils/testData';
 
-test('TC01 - Login With Valid Credentials And Cashier Sign In', async ({ login, page }) => {
+test('TC00 - Login With Valid Credentials And Cashier Sign In', async ({ login, page }) => {
   const { username, password } = TestData.validUser;
 
   await login.loadpage(); // Load page at test start

@@ -7,6 +7,7 @@ export class PaymentPage {
   // Payment Locators
   readonly transactionsMenu: Locator;
   readonly paymentTab: Locator;
+  readonly branch: Locator;
   readonly section: Locator;
   readonly accountName: Locator;
   readonly payTo: Locator;
@@ -28,6 +29,7 @@ export class PaymentPage {
     // Payment Locators
     this.transactionsMenu = page.getByRole('button', { name: 'Transactions' });
     this.paymentTab = page.getByRole('menuitem', { name: 'Payment', exact: true });
+    this.branch = page.getByLabel('Branch');
     this.section = page.getByLabel('Section');
     this.accountName = page.getByRole('textbox', { name: 'Type account name...' });
     this.payTo = page.getByRole('textbox', { name: 'Payee Name' });
@@ -55,10 +57,13 @@ export class PaymentPage {
   }
 
   // Payment method
-  async payment(accountName: string, payTo: string, description: string, amount: string) {
+  async payment(branchId: string, sectionId: string, accountName: string, payTo: string, description: string, amount: string) {
     await this.transactionsMenu.click();
     await this.paymentTab.click();
-    await this.section.selectOption('1');
+    // await this.branch.click();
+    // await this.branch.selectOption(branchId);
+    await this.section.click();
+    await this.section.selectOption(sectionId);
     await this.page.waitForTimeout(3000);
     await this.accountName.fill(accountName);
     const accountNameLocator = this.getAccountNameLocator(accountName);

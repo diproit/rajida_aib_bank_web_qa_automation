@@ -7,9 +7,9 @@ test('TC03 - Withdraw Transaction', async ({ page }) => {
 
   await page.goto('/transactions/withdrawal');
 
- const { customerNumber, accountNumberValue, amount} = TestData.withdrawal;
+ const { customerNumber, accountNumberId, amount} = TestData.withdrawal;
   
-    await withdrawalPage.withdrawal(customerNumber, accountNumberValue, amount);
+    await withdrawalPage.withdrawal(customerNumber, accountNumberId, amount);
     // await withdrawalPage.validateWithdrawalSuccess();
   
   });

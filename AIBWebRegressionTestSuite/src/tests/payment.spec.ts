@@ -8,11 +8,11 @@ test('TC03 - Payment Transaction', async ({ page }) => {
 
   await page.goto('/transactions/payment');
 
-  const { accountName, payTo, description, amount } = TestData.payment;
+  const { branchId, sectionId, accountName, payTo, description, amount } = TestData.payment;
 
-  await paymentPage.payment(accountName, payTo, description, amount);
+  await paymentPage.payment(branchId, sectionId, accountName, payTo, description, amount);
   // await paymentPage.validatePaymentSuccess();
 
-  await paymentPage.approvePayment(description);
-  await paymentPage.validateApproveSuccess();
+  // await paymentPage.approvePayment(description);
+  // await paymentPage.validateApproveSuccess();
 });

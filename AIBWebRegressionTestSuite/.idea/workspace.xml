@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a27baf5-29c2-4042-9d6d-f9a7f7c7a7e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/tests/login.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/login.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/pages/PaymentPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/pages/PaymentPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/pages/WithdrawPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/pages/WithdrawPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/payment.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/payment.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/test-suites/suite.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/test-suites/suite.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/withdraw.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/withdraw.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/testData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/testData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storageState.json" beforeDir="false" afterPath="$PROJECT_DIR$/storageState.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
