@@ -1,46 +1,65 @@
+import { LoanApplicationPage } from "../features/pages/LoanApplicationPage";
+
 export const TestData = {
   validUser: {
     username: 'NilkiHR',
     password: 'nilki123'
   },
 
-  cashier:{
+  cashier: {
     cashBook: 'Cash Book',
     openingCashAmount: '20000'
   },
 
-  receipt:{
+  receipt: {
     customerNumber: '1M0051',
     accountNumber: '004-10062',
     amount: '1600'
   },
 
-  payment:{
+  payment: {
     branchId: '1', // Add gl_branch.id 
     sectionId: '1', // Add gl_section.id
-    accountName:'Electracity Bill Expenses',
-    payTo:'Test Automation',
-    description:'Test Automation',
-    amount:'3000',
-    
+    accountName: 'Electracity Bill Expenses',
+    payTo: 'Test Automation',
+    description: 'Test Automation',
+    amount: '3000',
+
   },
 
-  withdrawal:{
+  withdrawal: {
     customerNumber: '1M0051',
     accountNumberId: '102921', //Add the pl_account.id of the account to select //004-10062
     amount: '2000'
   },
 
-  journal:{
+  journal: {
     branchId: '1', // Add gl_branch.id 
     sectionId: '1', // Add gl_section.id    
-    accountName1:'Stationeries Stock In Hand (Office)',
-    description1:'Test Automation',
-    credit:'100000',
-    accountName2:'Pension Fund',
-    description2:'Test Automation',
-    debit:'100000'
+    accountName1: 'Stationeries Stock In Hand (Office)',
+    description1: 'Test Automation',
+    credit: '100000',
+    accountName2: 'Pension Fund',
+    description2: 'Test Automation',
+    debit: '100000',
+  },
 
+  loanApplication: {
+    customerNumber: '1M0051',
+    loanProductId: '29', //Add the pl_account_type.id of the product to select //Housing Loan
+    amount: '10000'
+  },
+
+  loanApplicationList: {
+    customerNumber: '1M0051',
+    loanPeriod: '12',
+    loanInterest: '6',
+    guarantorType: 'Gur 1',
+    guarantorNumber: '1N2363',
+    comment: 'Test Automation',
+    disbursementAmount: '1000',
+    disbursementType: 'Cash',
+    disbursementMethod: 'Manual'
   }
 
 };

@@ -5,7 +5,7 @@ test('TC01 - Cashier Sign Off', async ({ page }) => {
   
   const signInPage = new SignInPage(page);
 
-  await page.goto('/transactions/payment');
+  await page.goto('/');
 
   await signInPage.cashierSignOff();
   await signInPage.validateSigninSuccess();

@@ -2,20 +2,20 @@
   "cookies": [
     {
       "name": "access_token",
-      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDciLCJleHAiOjE3NzU2MzM0MzgsInR5cGUiOiJhY2Nlc3MifQ.9MjsuDAS_iNUdatGjNwn-NNkNLEeNMNV-pjFxSWSQeE",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDciLCJleHAiOjE3NzU4MDg2OTgsInR5cGUiOiJhY2Nlc3MifQ.XylmxD2dJm6YfNYF2ZYiAUTX99znS532wjIyQ6UqSmc",
       "domain": "qaaibweb.aibanker.cloud",
       "path": "/",
-      "expires": 1775633437.966519,
+      "expires": 1775808698.580276,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "refresh_token",
-      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDciLCJleHAiOjE3NzYyMzY0MzgsInR5cGUiOiJyZWZyZXNoIn0.SYQRD1qKslYOQOz-vQ1itOgZ4u9jn4mVr4VSx9889Yc",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDciLCJleHAiOjE3NzY0MTE2OTgsInR5cGUiOiJyZWZyZXNoIn0.DxiV2F2eQxDyzfJBEyZ4qK86daaT7hc9DNpLd-_F8M4",
       "domain": "qaaibweb.aibanker.cloud",
       "path": "/",
-      "expires": 1776236437.966886,
+      "expires": 1776411698.580566,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"

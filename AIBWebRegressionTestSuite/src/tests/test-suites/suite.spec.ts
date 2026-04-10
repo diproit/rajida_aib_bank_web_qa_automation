@@ -3,6 +3,8 @@ import * as receipt from '../receipt.spec';
 import * as payment from '../payment.spec';
 import * as withdraw from '../withdraw.spec';
 import * as journal from '../journal.spec';
+import * as loanApplication from '../loanApplication.spec';
+import * as loanApplicationList from '../loanApplicationList.spec';
 import * as signOff from '../signOff.spec';
 
 
@@ -10,10 +12,7 @@ import * as signOff from '../signOff.spec';
 // test.use(payment);
 // test.use(withdraw);
 // test.use(journal);
-
-
-
-
-
+// test.use(loanApplication);
+test.use(loanApplicationList);
 
 test.use(signOff);

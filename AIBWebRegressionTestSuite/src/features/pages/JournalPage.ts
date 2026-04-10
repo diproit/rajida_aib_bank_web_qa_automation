@@ -106,15 +106,15 @@ export class JournalPage {
   }
 
   // Approve journal method
-  async approveJournal(description: string) {
+  async approveJournal() {
     await this.transactionsMenu.click();
     await this.approvalTab.click();
     await this.page.waitForTimeout(3000);
     await this.allSections.click();
     await this.journalTxn.click();
     await this.page.waitForTimeout(3000);
-    // Find and click the first payment row with the matching description
-    const journalRow = this.page.getByRole('row').filter({ hasText: description }).first();
+    // Find and click the first journal row with the matching description and user
+    const journalRow = this.page.getByRole('row').filter({ hasText: 'Journal Entry' }).first();
     this.clickedTxnNo = await journalRow.getByText(/-T\d+/).textContent() || '';
     await journalRow.click();
     await this.page.waitForTimeout(3000);

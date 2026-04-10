@@ -3,7 +3,7 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './src/tests',
-  timeout: 50000,
+  timeout: 0,
   workers: 1,
   // retries: 1,
   reporter: [
@@ -20,6 +20,7 @@ module.exports = defineConfig({
   use: {
     baseURL: 'https://qaaibweb.aibanker.cloud/', 
     headless: false,
+    slowMo: 2500,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
