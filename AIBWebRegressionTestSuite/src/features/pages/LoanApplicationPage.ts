@@ -6,7 +6,7 @@ export class LoanApplicationPage {
   // LoanApplication Locators
   readonly loansMenu: Locator;
   readonly loanApplicationTab: Locator;
-  readonly customerNumber: Locator;
+  readonly loanCustomerNumber: Locator;
   readonly next: Locator;
   readonly loanProduct: Locator;
   readonly amount: Locator;
@@ -19,7 +19,7 @@ export class LoanApplicationPage {
     // LoanApplication Locators
     this.loansMenu = page.getByRole('button', { name: 'Loans' });
     this.loanApplicationTab = page.getByRole('menuitem', { name: 'Loan Application', exact: true });
-    this.customerNumber = page.getByRole('textbox', { name: 'Customer Number' });
+    this.loanCustomerNumber = page.getByRole('textbox', { name: 'Customer Number' });
     this.next = page.getByRole('button', { name: 'Next' });
     this.loanProduct = page.getByPlaceholder('Select Loan Product');
     this.amount = page.getByRole('textbox', { name: 'Request Amount' });
@@ -28,10 +28,10 @@ export class LoanApplicationPage {
   }
 
   // LoanApplication method
-  async loanApplication(customerNumber: string, loanProductId: string, amount: string) {
+  async loanApplication(loanCustomerNumber: string, loanProductId: string, amount: string) {
     await this.loansMenu.click();
     await this.loanApplicationTab.click();
-    await this.customerNumber.fill(customerNumber);
+    await this.loanCustomerNumber.fill(loanCustomerNumber);
     await this.next.click();
     await this.page.waitForTimeout(3000);
     // Click to open dropdown

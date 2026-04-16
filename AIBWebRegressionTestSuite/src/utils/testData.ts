@@ -45,7 +45,7 @@ export const TestData = {
   },
 
   loanApplication: {
-    customerNumber: '1M0051',
+    loanCustomerNumber: '1M0051',
     loanProductId: '29', //Add the pl_account_type.id of the product to select //Housing Loan
     amount: '10000'
   },
@@ -60,6 +60,16 @@ export const TestData = {
     disbursementAmount: '1000',
     disbursementType: 'Cash',
     disbursementMethod: 'Manual'
+  },
+
+  fdAdvance: {
+    fdCustomerNumber: '1M0051',
+    fdLoanProductId: '22',
+    accountNumber: '006-10614',
+    accountName:'Member Fixed',
+    requestLoanAmount:'10000',
+    fdLoanPeriod: '12',
+    fdCertificate: 'C:/Users/nilki/Downloads/Test Document.pdf'
   }
 
 };

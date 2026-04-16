@@ -41,7 +41,7 @@ export class LoanApplicationListPage {
         this.sendToDisburse = page.getByRole('button', { name: 'Send To Disburse' });
         this.disbursementAmount = page.getByRole('spinbutton', { name: 'Disbursement Amount' });
         this.disburseButton = page.getByRole('button', { name: 'Disburse' });
-    this.loanDisburseSuccessMessage = page.getByText('Transaction processed successfully.');
+        this.loanDisburseSuccessMessage = page.getByText('Transaction processed successfully.');
 
     }
 
@@ -138,11 +138,41 @@ export class LoanApplicationListPage {
 
     }
 
-    async validateLoanDisbursementSuccess() {
-    await this.page.waitForTimeout(3000);
-    await expect(this.loanDisburseSuccessMessage).toBeVisible();
-    await this.page.waitForTimeout(3000);
-  }
+    async fdDoApproval(customerNumber: string, loanPeriod: string, loanInterest: string, guarantorType: string, guarantorNumber: string, comment: string) {
+        await this.loansMenu.click();
+        await this.loanApplicationListTab.click();
+
+        const DoApprovalButtonLocator = this.page.getByRole('row').filter({ hasText: customerNumber }).first();
+        await DoApprovalButtonLocator.locator('button').click();
+        await this.page.waitForTimeout(3000);
+
+        await this.next.click();
+
+        await this.guarantorType.click();
+        await this.guarantorType.selectOption(guarantorType);
+
+        await this.page.waitForTimeout(3000);
+
+        await this.guarantorNumber.click();
+        await this.guarantorNumber.fill(guarantorNumber);
+        const guarantorNameLocator = this.getGuarantorNumberLocator(guarantorNumber);
+        await guarantorNameLocator.click();
+        await this.page.waitForTimeout(3000);
+
+        await this.next.click();
+
+        await this.next.click();
+
+        await this.page.waitForTimeout(3000);
+
+        await this.writeComment.fill(comment);
+        await this.page.waitForTimeout(3000);
+        await this.addCommentButton.click();
+        await this.page.waitForTimeout(3000);
+        await this.sendToDisburse.click();
+        await this.page.waitForTimeout(3000);
+        await this.yes.click();
+    }
 
 
 }
