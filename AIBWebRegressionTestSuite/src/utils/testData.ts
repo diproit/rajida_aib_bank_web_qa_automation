@@ -18,8 +18,8 @@ export const TestData = {
   },
 
   payment: {
-    branchId: '1', // Add gl_branch.id 
-    sectionId: '1', // Add gl_section.id
+    branch: 'Maharagama',
+    section: 'Bank',
     accountName: 'Electracity Bill Expenses',
     payTo: 'Test Automation',
     description: 'Test Automation',
@@ -29,47 +29,72 @@ export const TestData = {
 
   withdrawal: {
     customerNumber: '1M0051',
-    accountNumberId: '102921', //Add the pl_account.id of the account to select //004-10062
+    account: '004-10062 - Saving Deposit',
     amount: '2000'
   },
 
   journal: {
-    branchId: '1', // Add gl_branch.id 
-    sectionId: '1', // Add gl_section.id    
+    branch: 'Maharagama',
+    section: 'Bank',
     accountName1: 'Stationeries Stock In Hand (Office)',
     description1: 'Test Automation',
-    credit: '100000',
+    credit: '7000',
     accountName2: 'Pension Fund',
     description2: 'Test Automation',
-    debit: '100000',
+    debit: '7000',
   },
 
   loanApplication: {
     loanCustomerNumber: '1M0051',
-    loanProductId: '29', //Add the pl_account_type.id of the product to select //Housing Loan
-    amount: '10000'
+    loanProduct: 'Housing Loan',
+    amount: '20000'
   },
 
   loanApplicationList: {
     customerNumber: '1M0051',
+    applicationStatus: 'Pending',
+    applicationStatus2: 'In Approval',
+    applicationStatus3: 'In Disburse',
+    applicationLoanProduct: 'Housing Loan',
+    customerNumberSearch: '1M0051',
     loanPeriod: '12',
     loanInterest: '6',
     guarantorType: 'Gur 1',
     guarantorNumber: '1N2363',
     comment: 'Test Automation',
-    disbursementAmount: '1000',
+    disbursementAmount: '2000',
     disbursementType: 'Cash',
     disbursementMethod: 'Manual'
   },
 
   fdAdvance: {
     fdCustomerNumber: '1M0051',
-    fdLoanProductId: '22',
+    fdLoanProduct: 'Advance Loan',
     accountNumber: '006-10614',
-    accountName:'Member Fixed',
-    requestLoanAmount:'10000',
+    accountName: 'Member Fixed',
+    requestLoanAmount: '10000',
     fdLoanPeriod: '12',
     fdCertificate: 'C:/Users/nilki/Downloads/Test Document.pdf'
+  },
+
+  members: {
+    customerType: 'Member',
+    nic: '974759553v',
+    title: 'Mr',
+    fullNameEng: 'Test Automation Member',
+    initialNameEng: 'T A C',
+    addressEng: '35/A, Test Automation',
+    gender: 'Male',
+    dob: '1997-10-05',
+    memberDate: '2026-04-17',
+    marriedStatus: 'Single',
+    mobile1: '0712442493',
+    city: 'Colombo',
+    occupation: 'Test Occupation',
+    employer: 'Test Employer',
+    profileImage: 'C:/Users/nilki/OneDrive/Desktop/Images/person.png',
+    signatureImage: 'C:/Users/nilki/OneDrive/Desktop/Images/signature.png',
+    nicImage: 'C:/Users/nilki/Downloads/Test Document.pdf'
   }
 
 };

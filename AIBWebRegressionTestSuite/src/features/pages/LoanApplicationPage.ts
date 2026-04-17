@@ -28,7 +28,7 @@ export class LoanApplicationPage {
   }
 
   // LoanApplication method
-  async loanApplication(loanCustomerNumber: string, loanProductId: string, amount: string) {
+  async loanApplication(loanCustomerNumber: string, loanProduct: string, amount: string) {
     await this.loansMenu.click();
     await this.loanApplicationTab.click();
     await this.loanCustomerNumber.fill(loanCustomerNumber);
@@ -38,7 +38,7 @@ export class LoanApplicationPage {
     await this.loanProduct.click();
     await this.page.waitForTimeout(3000);
     // Wait for the loan product dropdown options to load
-    await this.loanProduct.selectOption(loanProductId);
+    await this.loanProduct.selectOption({ label: loanProduct });
     await this.amount.fill(amount);
     await this.page.waitForTimeout(3000);
     await this.update.click();

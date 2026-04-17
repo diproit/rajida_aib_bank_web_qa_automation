@@ -57,13 +57,13 @@ export class PaymentPage {
   }
 
   // Payment method
-  async payment(branchId: string, sectionId: string, accountName: string, payTo: string, description: string, amount: string) {
+  async payment(branchId: string, section: string, accountName: string, payTo: string, description: string, amount: string) {
     await this.transactionsMenu.click();
     await this.paymentTab.click();
-    // await this.branch.click();
-    // await this.branch.selectOption(branchId);
+    await this.branch.click();
+    await this.branch.selectOption(branchId);
     await this.section.click();
-    await this.section.selectOption(sectionId);
+    await this.section.selectOption({ label: section });
     await this.page.waitForTimeout(3000);
     await this.accountName.fill(accountName);
     const accountNameLocator = this.getAccountNameLocator(accountName);

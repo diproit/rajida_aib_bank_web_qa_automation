@@ -9,17 +9,17 @@ test('TC06 - Loan Application', async ({ page }) => {
 
   await page.goto('/loans/application');
 
-  const { loanCustomerNumber, loanProductId, amount } = TestData.loanApplication;
+  const { loanCustomerNumber, loanProduct, amount } = TestData.loanApplication;
 
-  await loanApplicationPage.loanApplication(loanCustomerNumber, loanProductId, amount);
+  await loanApplicationPage.loanApplication(loanCustomerNumber, loanProduct, amount);
 
   const loanApplicationListPage = new LoanApplicationListPage(page);
 
   await page.goto('/loans/application-list');
 
-  const { customerNumber, loanPeriod, loanInterest, guarantorType, guarantorNumber, comment, disbursementAmount, disbursementType, disbursementMethod } = TestData.loanApplicationList;
+  const { customerNumber, applicationStatus, applicationStatus2, applicationStatus3, applicationLoanProduct, customerNumberSearch, loanPeriod, loanInterest, guarantorType, guarantorNumber, comment, disbursementAmount, disbursementType, disbursementMethod } = TestData.loanApplicationList;
 
-  await loanApplicationListPage.loanDoAppraisal(customerNumber, loanPeriod, loanInterest, guarantorType, guarantorNumber, comment);
-  await loanApplicationListPage.loanDoApproval(customerNumber);
-  await loanApplicationListPage.loanDoDisburse(customerNumber, disbursementAmount, disbursementType, disbursementMethod);
+  await loanApplicationListPage.loanDoAppraisal(customerNumber, applicationStatus, applicationLoanProduct, customerNumberSearch,loanPeriod, loanInterest, guarantorType, guarantorNumber, comment);
+  await loanApplicationListPage.loanDoApproval(customerNumber, applicationStatus2, applicationLoanProduct, customerNumberSearch);
+  await loanApplicationListPage.loanDoDisburse(customerNumber, applicationStatus3, applicationLoanProduct, customerNumberSearch, disbursementAmount, disbursementType, disbursementMethod);
 });

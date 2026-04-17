@@ -31,7 +31,7 @@ export class WithdrawalPage {
   }
 
   // Withdrawal method
-  async withdrawal(customerNumber: string, accountNumberId: string, amount: string) {
+  async withdrawal(customerNumber: string, account: string, amount: string) {
     await this.transactionsMenu.click();
     await this.withdrawalTab.click();
     await this.customerNumber.fill(customerNumber);
@@ -41,7 +41,7 @@ export class WithdrawalPage {
     await this.accountNumber.click();
     await this.page.waitForTimeout(1000);
     // Wait for the account dropdown options to load
-    await this.accountNumber.selectOption(accountNumberId);
+    await this.accountNumber.selectOption({ label: account });
     await this.amount.fill(amount);
     await this.update.click();
     await this.page.waitForTimeout(3000);

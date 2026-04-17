@@ -7,6 +7,10 @@ export class LoanApplicationListPage {
     // Approval Locators
     readonly loansMenu: Locator;
     readonly loanApplicationListTab: Locator;
+    readonly applicationStatus: Locator;
+    readonly applicationLoanProduct: Locator;
+    readonly customerNumberSearch: Locator;
+    readonly search: Locator;
     readonly loanPeriod: Locator;
     readonly loanInterest: Locator;
     readonly writeComment: Locator;
@@ -19,7 +23,6 @@ export class LoanApplicationListPage {
     readonly sendToDisburse: Locator;
     readonly disbursementAmount: Locator;
     readonly disburseButton: Locator;
-    readonly loanDisburseSuccessMessage: Locator;
 
 
 
@@ -41,7 +44,10 @@ export class LoanApplicationListPage {
         this.sendToDisburse = page.getByRole('button', { name: 'Send To Disburse' });
         this.disbursementAmount = page.getByRole('spinbutton', { name: 'Disbursement Amount' });
         this.disburseButton = page.getByRole('button', { name: 'Disburse' });
-        this.loanDisburseSuccessMessage = page.getByText('Transaction processed successfully.');
+        this.applicationStatus = page.getByLabel('Status', { exact: true });
+        this.applicationLoanProduct = page.getByLabel('Product');
+        this.customerNumberSearch = page.getByRole('textbox', { name: 'Search' });
+        this.search = page.getByRole('button', { name: 'Search' });
 
     }
 
@@ -51,11 +57,20 @@ export class LoanApplicationListPage {
     }
 
 
-    async loanDoAppraisal(customerNumber: string, loanPeriod: string, loanInterest: string, guarantorType: string, guarantorNumber: string, comment: string) {
+    async loanDoAppraisal(customerNumber: string, applicationStatus: string, applicationLoanProduct: string, customerNumberSearch: string, loanPeriod: string, loanInterest: string, guarantorType: string, guarantorNumber: string, comment: string) {
         await this.loansMenu.click();
         await this.loanApplicationListTab.click();
 
-        // await this.page.evaluate(() => { document.body.style.zoom = '50%'; });
+        await this.applicationStatus.click();
+        await this.applicationStatus.selectOption({ label: applicationStatus });
+
+        await this.applicationLoanProduct.click();
+        await this.applicationLoanProduct.selectOption({ label: applicationLoanProduct });
+
+        await this.customerNumberSearch.click();
+        await this.customerNumberSearch.fill(customerNumberSearch);
+
+        await this.search.click();
 
         const DoAppraisalButtonLocator = this.page.getByRole('row').filter({ hasText: customerNumber }).first();
         await DoAppraisalButtonLocator.locator('button').click();
@@ -70,9 +85,8 @@ export class LoanApplicationListPage {
         await this.page.waitForTimeout(3000);
         await this.next.click();
 
-        await this.guarantorType.click();
-        await this.guarantorType.selectOption(guarantorType);
         // await this.guarantorType.click();
+        // await this.guarantorType.selectOption(guarantorType);
 
         await this.page.waitForTimeout(3000);
 
@@ -95,7 +109,19 @@ export class LoanApplicationListPage {
         await this.page.waitForTimeout(3000);
         await this.yes.click();
     }
-    async loanDoApproval(customerNumber: string) {
+    async loanDoApproval(customerNumber: string, applicationStatus2: string, applicationLoanProduct: string, customerNumberSearch: string) {
+
+        await this.applicationStatus.click();
+        await this.applicationStatus.selectOption({ label: applicationStatus2 });
+
+        await this.applicationLoanProduct.click();
+        await this.applicationLoanProduct.selectOption({ label: applicationLoanProduct });
+
+        await this.customerNumberSearch.click();
+        await this.customerNumberSearch.fill(customerNumberSearch);
+
+        await this.search.click();
+
         const DoApprovalButtonLocator = this.page.getByRole('row').filter({ hasText: customerNumber }).first();
         await DoApprovalButtonLocator.locator('button').click();
         await this.page.waitForTimeout(3000);
@@ -115,7 +141,18 @@ export class LoanApplicationListPage {
         await this.page.waitForTimeout(3000);
     }
 
-    async loanDoDisburse(customerNumber: string, disbursementAmount: string, disbursementType: string, disbursementMethod: string) {
+    async loanDoDisburse(customerNumber: string, applicationStatus3: string, applicationLoanProduct: string, customerNumberSearch: string, disbursementAmount: string, disbursementType: string, disbursementMethod: string) {
+
+        await this.applicationStatus.click();
+        await this.applicationStatus.selectOption({ label: applicationStatus3 });
+
+        await this.applicationLoanProduct.click();
+        await this.applicationLoanProduct.selectOption({ label: applicationLoanProduct });
+
+        await this.customerNumberSearch.click();
+        await this.customerNumberSearch.fill(customerNumberSearch);
+
+        await this.search.click();
 
         const DoDisburseButtonLocator = this.page.getByRole('row').filter({ hasText: customerNumber }).first();
         await DoDisburseButtonLocator.locator('button').click();
@@ -138,41 +175,6 @@ export class LoanApplicationListPage {
 
     }
 
-    async fdDoApproval(customerNumber: string, loanPeriod: string, loanInterest: string, guarantorType: string, guarantorNumber: string, comment: string) {
-        await this.loansMenu.click();
-        await this.loanApplicationListTab.click();
-
-        const DoApprovalButtonLocator = this.page.getByRole('row').filter({ hasText: customerNumber }).first();
-        await DoApprovalButtonLocator.locator('button').click();
-        await this.page.waitForTimeout(3000);
-
-        await this.next.click();
-
-        await this.guarantorType.click();
-        await this.guarantorType.selectOption(guarantorType);
-
-        await this.page.waitForTimeout(3000);
-
-        await this.guarantorNumber.click();
-        await this.guarantorNumber.fill(guarantorNumber);
-        const guarantorNameLocator = this.getGuarantorNumberLocator(guarantorNumber);
-        await guarantorNameLocator.click();
-        await this.page.waitForTimeout(3000);
-
-        await this.next.click();
-
-        await this.next.click();
-
-        await this.page.waitForTimeout(3000);
-
-        await this.writeComment.fill(comment);
-        await this.page.waitForTimeout(3000);
-        await this.addCommentButton.click();
-        await this.page.waitForTimeout(3000);
-        await this.sendToDisburse.click();
-        await this.page.waitForTimeout(3000);
-        await this.yes.click();
-    }
-
+    
 
 }

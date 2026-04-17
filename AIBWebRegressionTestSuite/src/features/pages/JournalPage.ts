@@ -69,13 +69,13 @@ export class JournalPage {
   }
 
   // Journal method
-  async journal(branchId: string, sectionId: string, accountName1: string, description1: string, credit: string, accountName2: string, description2: string, debit: string) {
+  async journal(branch: string, section: string, accountName1: string, description1: string, credit: string, accountName2: string, description2: string, debit: string) {
     await this.transactionsMenu.click();
     await this.journalTab.click();
-    // await this.branch.click();
-    // await this.branch.selectOption(branchId);
+    await this.branch.click();
+    await this.branch.selectOption({ label: branch });
     await this.section.click();
-    await this.section.selectOption(sectionId);
+    await this.section.selectOption({ label: section });
     await this.page.waitForTimeout(3000);
     await this.accountName1.fill(accountName1);
     const accountName1Locator = this.getAccountName1Locator(accountName1);

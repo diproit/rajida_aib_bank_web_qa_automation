@@ -8,7 +8,7 @@ export class FDAdvancePage {
     readonly fdAdvanceTab: Locator;
     readonly fdCustomerNumber: Locator;
     readonly next: Locator;
-    readonly fdLoanProductId: Locator;
+    readonly fdLoanProduct: Locator;
     readonly sendToApproval: Locator;
 
 
@@ -20,7 +20,7 @@ export class FDAdvancePage {
         this.fdAdvanceTab = page.getByRole('menuitem', { name: 'FD Advance', exact: true });
         this.fdCustomerNumber = page.getByRole('textbox', { name: 'Customer Number' });
         this.next = page.getByRole('button', { name: 'Next' });
-        this.fdLoanProductId = page.getByPlaceholder('Select FD Account Type');
+        this.fdLoanProduct = page.getByPlaceholder('Select FD Account Type');
         this.sendToApproval = page.getByRole('button', { name: 'Send to Approve' });
     }
 
@@ -38,17 +38,16 @@ export class FDAdvancePage {
 
 
     // FD Advance method
-    async fdAdvance(fdCustomerNumber: string, fdLoanProductId: string, accountNumber: string, accountName: string, requestLoanAmount: string, fdLoanPeriod: string, fdCertificate: string) {
+    async fdAdvance(fdCustomerNumber: string, fdLoanProduct: string, accountNumber: string, accountName: string, requestLoanAmount: string, fdLoanPeriod: string, fdCertificate: string) {
         await this.loansMenu.click();
         await this.fdAdvanceTab.click();
         await this.fdCustomerNumber.fill(fdCustomerNumber);
         await this.next.click();
         await this.page.waitForTimeout(3000);
         // Click to open dropdown
-        await this.fdLoanProductId.click();
+        await this.fdLoanProduct.click();
         await this.page.waitForTimeout(3000);
-        // Wait for the loan product dropdown options to load
-        await this.fdLoanProductId.selectOption(fdLoanProductId);
+        await this.fdLoanProduct.selectOption({ label: fdLoanProduct });
         const amountLocator = this.getRequestAmountLocator(accountNumber, accountName);
         await amountLocator.fill(requestLoanAmount);
         await this.page.waitForTimeout(3000);

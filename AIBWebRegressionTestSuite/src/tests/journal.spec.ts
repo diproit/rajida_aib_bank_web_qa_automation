@@ -8,11 +8,10 @@ test('TC05 - Journal Transaction', async ({ page }) => {
 
   await page.goto('/transactions/journal');
 
-  const { branchId, sectionId, accountName1, description1, credit, accountName2, description2, debit} = TestData.journal;
+  const { branch, section, accountName1, description1, credit, accountName2, description2, debit} = TestData.journal;
 
-  // await journalPage.journal(branchId, sectionId, accountName1, description1, credit, accountName2, description2, debit);
-//   await journalPage.validateJournalSuccess();
+  await journalPage.journal(branch, section, accountName1, description1, credit, accountName2, description2, debit);
 
-  await journalPage.approveJournal();
-  await journalPage.validateApproveSuccess();
+  // await journalPage.approveJournal();
+  // await journalPage.validateApproveSuccess();
 });

@@ -20,7 +20,7 @@ module.exports = defineConfig({
   use: {
     baseURL: 'https://qaaibweb.aibanker.cloud/', 
     headless: false,
-    slowMo: 2500,
+    slowMo: 5000,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',

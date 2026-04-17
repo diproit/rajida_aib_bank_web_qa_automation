@@ -4,15 +4,17 @@ import * as payment from '../payment.spec';
 import * as withdraw from '../withdraw.spec';
 import * as journal from '../journal.spec';
 import * as loanApplication from '../loanApplication.spec';
-import * as fdAdvance from '../fdAdvance.spec'
+import * as fdAdvance from '../fdAdvance.spec';
+import * as members from '../members.spec';
 import * as signOff from '../signOff.spec';
 
 
 // test.use(receipt);
-// test.use(payment);
-// test.use(withdraw);
+test.use(payment);
+test.use(withdraw);
 // test.use(journal);
 // test.use(loanApplication);
-test.use(fdAdvance);
+// test.use(fdAdvance);
+// test.use(members);
 
 test.use(signOff);
