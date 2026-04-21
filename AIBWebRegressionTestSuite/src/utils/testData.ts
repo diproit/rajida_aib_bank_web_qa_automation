@@ -56,7 +56,7 @@ export const TestData = {
     applicationStatus2: 'In Approval',
     applicationStatus3: 'In Disburse',
     applicationLoanProduct: 'Housing Loan',
-    customerNumberSearch: '1M0051',
+    fdLoanProduct: 'Advance Loan',
     loanPeriod: '12',
     loanInterest: '6',
     guarantorType: 'Gur 1',
@@ -95,6 +95,42 @@ export const TestData = {
     profileImage: 'C:/Users/nilki/OneDrive/Desktop/Images/person.png',
     signatureImage: 'C:/Users/nilki/OneDrive/Desktop/Images/signature.png',
     nicImage: 'C:/Users/nilki/Downloads/Test Document.pdf'
+  },
+
+  savingApplication: {
+    customerNumber: '1M0051',
+    savingProduct: 'Member Fixed Deposit (Anually)',
+    period: '12',
+    interestRate: '6',
+    interestUpdateAccount: '002-10049',
+    maturityOption: 'Monthly Interest Credit to Savings Account',
+    initialAmount: '20000',
+    withdrawalInstruction: 'Test Automation'
+  },
+
+  chartOfAccount: {
+    typeGroup: 'Expences',
+    coaType: 'Staff expenses',
+    nameEng: 'Test Automation COA'
+  },
+
+  savingProduct: {
+    productNameEng: 'Test Automation Saving Product',
+    autoNumberCreation: 'Enable', //Enable/Disable
+    operatingType: 'Normal Savings',
+    interestPolicy: 'Monthly Interest (Normal Savings)',
+    interestUpdatePolicy: 'Updates end of month',
+    interestRateMin: '0',
+    interestRateMax: '6',
+    periodMin: '1',
+    periodMax: '12',
+    minimumBalance: '600',
+    pbType: 'Pass Book',
+    decimalNumber: '1',
+    glAccount: 'Member Savings',
+    interestAccount: 'Savings Interest Expenses',
+    reservationAccount: 'Payble Office Rent Expenses',
+    taxAccount: 'Abans Auto Pvt Ltd'
   }
 
 };

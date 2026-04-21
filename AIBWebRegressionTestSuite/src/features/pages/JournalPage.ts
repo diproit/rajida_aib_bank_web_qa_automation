@@ -18,13 +18,6 @@ export class JournalPage {
   readonly sendToApproval: Locator;
   readonly journalSuccessMessage: Locator;
 
-  // Approval Locators
-  readonly approvalTab: Locator;
-  readonly allSections: Locator;
-  readonly journalTxn: Locator;
-  readonly approveBtn: Locator;
-  readonly approveSuccessMessage: Locator;
-
   constructor(page: Page) {
     this.page = page;
 
@@ -42,12 +35,6 @@ export class JournalPage {
     this.sendToApproval = page.getByRole('button', { name: 'Send to Approve' });
     this.journalSuccessMessage = page.getByText('Journal transaction processed');
 
-    // Approval Locators
-    this.approvalTab = page.getByRole('menuitem', { name: 'Approvals' });
-    this.allSections = page.getByRole('button', { name: 'All Sections' });
-    this.journalTxn = page.getByRole('menuitem', { name: 'Journals' });
-    this.approveBtn = page.getByRole('button', { name: 'Approve' });
-    this.approveSuccessMessage = page.getByText('Transaction Approved', { exact: false });
   }
 
   // Method to get dynamic accountNameFill locator
@@ -104,30 +91,5 @@ export class JournalPage {
     await expect(this.journalSuccessMessage).toBeVisible();
     await this.page.waitForTimeout(3000);
   }
-
-  // Approve journal method
-  async approveJournal() {
-    await this.transactionsMenu.click();
-    await this.approvalTab.click();
-    await this.page.waitForTimeout(3000);
-    await this.allSections.click();
-    await this.journalTxn.click();
-    await this.page.waitForTimeout(3000);
-    // Find and click the first journal row with the matching description and user
-    const journalRow = this.page.getByRole('row').filter({ hasText: 'Journal Entry' }).first();
-    this.clickedTxnNo = await journalRow.getByText(/-T\d+/).textContent() || '';
-    await journalRow.click();
-    await this.page.waitForTimeout(3000);
-    await this.approveBtn.click();
-  }
-
-  async validateApproveSuccess() {
-    await this.page.waitForTimeout(3000);
-    const expectedMessage = `Transaction ${this.clickedTxnNo} Approved`;
-    const successMessage = this.page.getByText(expectedMessage, { exact: false });
-    await expect(successMessage).toBeVisible();
-    await this.page.waitForTimeout(3000);
-  }
-
 
 }

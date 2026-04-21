@@ -16,13 +16,6 @@ export class PaymentPage {
   readonly sendToApproval: Locator;
   readonly paymentSuccessMessage: Locator;
 
-  // Approval Locators
-  readonly approvalTab: Locator;
-  readonly allSections: Locator;
-  readonly paymentTxn: Locator;
-  readonly approveBtn: Locator;
-  readonly approveSuccessMessage: Locator;
-
   constructor(page: Page) {
     this.page = page;
 
@@ -38,12 +31,6 @@ export class PaymentPage {
     this.sendToApproval = page.getByRole('button', { name: 'Send to Approval' });
     this.paymentSuccessMessage = page.getByText('Transactions saved with No');
 
-    // Approval Locators
-    this.approvalTab = page.getByRole('menuitem', { name: 'Approvals' });
-    this.allSections = page.getByRole('button', { name: 'All Sections' });
-    this.paymentTxn = page.getByRole('menuitem', { name: 'Payment' });
-    this.approveBtn = page.getByRole('button', { name: 'Approve' });
-    this.approveSuccessMessage = page.getByText('Transaction Approved', { exact: false });
   }
 
   // Method to get dynamic accountNameFill locator
@@ -84,30 +71,5 @@ export class PaymentPage {
     await expect(this.paymentSuccessMessage).toBeVisible();
     await this.page.waitForTimeout(3000);
   }
-
-  // Approve payment method
-  async approvePayment(description: string) {
-    await this.transactionsMenu.click();
-    await this.approvalTab.click();
-    await this.page.waitForTimeout(3000);
-    await this.allSections.click();
-    await this.paymentTxn.click();
-    await this.page.waitForTimeout(3000);
-    // Find and click the first payment row with the matching description
-    const paymentRow = this.page.getByRole('row').filter({ hasText: description }).first();
-    this.clickedTxnNo = await paymentRow.getByText(/-T\d+/).textContent() || '';
-    await paymentRow.click();
-    await this.page.waitForTimeout(3000);
-    await this.approveBtn.click();
-  }
-
-  async validateApproveSuccess() {
-    await this.page.waitForTimeout(3000);
-    const expectedMessage = `Transaction ${this.clickedTxnNo} Approved`;
-    const successMessage = this.page.getByText(expectedMessage, { exact: false });
-    await expect(successMessage).toBeVisible();
-    await this.page.waitForTimeout(3000);
-  }
-
 
 }

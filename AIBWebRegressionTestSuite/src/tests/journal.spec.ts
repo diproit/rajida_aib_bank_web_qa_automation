@@ -12,6 +12,4 @@ test('TC05 - Journal Transaction', async ({ page }) => {
 
   await journalPage.journal(branch, section, accountName1, description1, credit, accountName2, description2, debit);
 
-  // await journalPage.approveJournal();
-  // await journalPage.validateApproveSuccess();
 });

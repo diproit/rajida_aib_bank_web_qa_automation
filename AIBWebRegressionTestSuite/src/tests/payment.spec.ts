@@ -12,6 +12,4 @@ test('TC03 - Payment Transaction', async ({ page }) => {
 
   await paymentPage.payment(branch, section, accountName, payTo, description, amount);
 
-  // await paymentPage.approvePayment(description);
-  // await paymentPage.validateApproveSuccess();
 });

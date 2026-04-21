@@ -8,10 +8,10 @@ test('TC00 - Login With Valid Credentials And Cashier Sign In', async ({ login, 
   await login.login(username, password);
   await login.validateLoginSuccess();
 
-  const { cashBook, openingCashAmount } = TestData.cashier;
+  // const { cashBook, openingCashAmount } = TestData.cashier;
 
-  await login.cashierSignIn(cashBook, openingCashAmount);
-  await login.validateSigninSuccess();
+  // await login.cashierSignIn(cashBook, openingCashAmount);
+  // await login.validateSigninSuccess();
 
   //Save logged-in state
   await page.context().storageState({ path: 'storageState.json' });

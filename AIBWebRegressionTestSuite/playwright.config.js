@@ -5,7 +5,7 @@ module.exports = defineConfig({
   testDir: './src/tests',
   timeout: 0,
   workers: 1,
-  // retries: 1,
+
   reporter: [
     ['list'],
     [
@@ -17,27 +17,41 @@ module.exports = defineConfig({
       },
     ],
   ],
+
   use: {
-    baseURL: 'https://qaaibweb.aibanker.cloud/', 
+    baseURL: 'https://qaaibweb.aibanker.cloud/',
     headless: false,
     slowMo: 5000,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
-  },
-  projects: [
-  {
-    name: 'setup',
-    testMatch: /.*login\.spec\.ts/, // ✅ FIXED (regex, not string)
-    use: { ...devices['Desktop Chrome'] },
-  },
-  {
-    name: 'chromium',
-    use: { 
-      ...devices['Desktop Chrome'],
-      storageState: 'storageState.json', // ✅ Step 2 applied here
+
+    launchOptions: {
+      args: ['--start-maximized'],
     },
-    dependencies: ['setup'], // ✅ ensures login runs first
+
+    viewport: null, // ✅ maximize
   },
-],
+
+  projects: [
+    {
+      name: 'setup',
+      testMatch: /.*login\.spec\.ts/,
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: null,
+        deviceScaleFactor: undefined, // ✅ FIX
+      },
+    },
+    {
+      name: 'chromium',
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: 'storageState.json',
+        viewport: null,
+        deviceScaleFactor: undefined, // ✅ FIX
+      },
+      dependencies: ['setup'],
+    },
+  ],
 });

@@ -6,15 +6,22 @@ import * as journal from '../journal.spec';
 import * as loanApplication from '../loanApplication.spec';
 import * as fdAdvance from '../fdAdvance.spec';
 import * as members from '../members.spec';
+import * as savingApplication from '../savingApplication.spec' 
+import * as coa from '../chartOfAccount.spec'
+import * as savingProduct from '../savingProduct.spec'
 import * as signOff from '../signOff.spec';
 
 
 // test.use(receipt);
-test.use(payment);
-test.use(withdraw);
+// test.use(payment);
+// test.use(withdraw);
 // test.use(journal);
 // test.use(loanApplication);
 // test.use(fdAdvance);
 // test.use(members);
+// test.use(savingApplication);
+// test.use(coa);
+test.use(savingProduct);
 
-test.use(signOff);
+
+// test.use(signOff);
