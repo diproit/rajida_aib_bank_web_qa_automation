@@ -131,6 +131,23 @@ export const TestData = {
     interestAccount: 'Savings Interest Expenses',
     reservationAccount: 'Payble Office Rent Expenses',
     taxAccount: 'Abans Auto Pvt Ltd'
+  },
+
+  investmentProduct: {
+    productNamePri: 'Test Automation Investment Product', 
+    accountCode: '0196', 
+    operatingType: 'FD Savings', 
+    interestPolicy: 'Monthly Interest (Normal Savings)', 
+    interestUpdatePolicy: 'Updates end of month', 
+    interestRateMin: '0', 
+    interestRateMax: '6', 
+    periodMin: '1', 
+    periodMax: '12', 
+    decimalNumber: '1', 
+    generalLedgersName: 'Investment', 
+    taxGLAccount: 'Advertisement Expenses', 
+    interestAccount: 'Savings Interest Income', 
+    interestReservationAccount: 'Office Rent Security Deposit'
   }
 
 };
