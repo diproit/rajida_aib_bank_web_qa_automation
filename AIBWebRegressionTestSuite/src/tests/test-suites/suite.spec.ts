@@ -10,6 +10,7 @@ import * as savingApplication from '../savingApplication.spec'
 import * as coa from '../chartOfAccount.spec'
 import * as savingProduct from '../savingProduct.spec'
 import * as investmentProduct from '../investmentProduct.spec'
+import * as loanProduct from '../loanProduct.spec'
 import * as signOff from '../signOff.spec';
 
 
@@ -23,7 +24,8 @@ import * as signOff from '../signOff.spec';
 // test.use(savingApplication);
 // test.use(coa);
 // test.use(savingProduct);
-test.use(investmentProduct);
+// test.use(investmentProduct);
+test.use(loanProduct);
 
 
 

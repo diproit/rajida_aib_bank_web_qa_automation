@@ -148,6 +148,34 @@ export const TestData = {
     taxGLAccount: 'Advertisement Expenses', 
     interestAccount: 'Savings Interest Income', 
     interestReservationAccount: 'Office Rent Security Deposit'
+  },
+
+  loanProduct: {
+    productNameEng: 'Test Automation Loan Product', 
+    productNameSin: 'පරීක්ෂණ ස්වයංක්‍රීය ණය නිෂ්පාදන', 
+    autoNumberCreation: 'Enable', //Enable/Disable
+    operatingType: 'Normal Loans', 
+    interestPolicy: 'Monthly Interest', 
+    penaltyPolicy: 'Penalty is not calculated', 
+    insurancePolicy: 'Insurance fund is not calculated', 
+    feePolicy: 'Stationery is not calculated', 
+    pastDuePolicy: 'Calculated', 
+    interestRateMin: '0', 
+    interestRateMax: '5', 
+    periodMin: '1', 
+    periodMax: '15', 
+    penaltyRate: '1', 
+    insuranceRate: '2', 
+    feeRate: '2', 
+    noOfLoanGuarantors: '1', 
+    fieldCollection: 'No', 
+    pbType: 'Pawning Mandate', 
+    decimalNumber: '1', 
+    glAccount: 'Employee Loan', 
+    glInterestAccount: 'Employee Loan Interest', 
+    glPenaltyAccount: 'Employee Loan Interest', 
+    glInsuranceAccount: 'Electricity Generation Income', 
+    glFeeAccount: 'Contributions Income'
   }
 
 };
