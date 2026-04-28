@@ -1,0 +1,163 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: test-suites\suite.spec.ts >> TC14 - Deposit And Withdraw Investments
+- Location: src\tests\investment.spec.ts:5:5
+
+# Error details
+
+```
+Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for getByLabel('Transaction Type')
+    - locator resolved to <select disabled id="_r_k_" class="_14h31gj0 _14h31gjc _14h31gj9 _14h31gj1 _14h31gj6 _14h31gj7 _14h31gj8 _14h31gjb _7n536nq _7n536nbc _7n536n68 _1fy35uo0 _14jht9l0 _14jht9l1 ndjjoi0 ndjjoi1 ndjjoi1u ndjjoie ndjjoi1y ndjjoi10 ndjjoi13 _7n536n2q _7n536n2j">…</select>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    31 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+
+```
+
+# Test source
+
+```ts
+  1   | import { Page, Locator, expect } from '@playwright/test';
+  2   | 
+  3   | export class InvestmentPage {
+  4   |     readonly page: Page;
+  5   | 
+  6   |     // Loan Product Locators
+  7   |     readonly transactionsMenu: Locator;
+  8   |     readonly investmentTab: Locator;
+  9   |     readonly addAccount: Locator;
+  10  |     readonly accountType: Locator;
+  11  |     readonly amount: Locator;
+  12  |     readonly add: Locator;
+  13  |     readonly addToList: Locator;
+  14  |     readonly process: Locator;
+  15  |     readonly transactionTypeDeposit: Locator;
+  16  |     readonly branch: Locator;
+  17  |     readonly depositInvestmentAccount: Locator;
+  18  |     readonly depositAmount: Locator;
+  19  |     readonly interestRate: Locator;
+  20  |     readonly period: Locator;
+  21  |     readonly note: Locator;
+  22  |     readonly transactionTypeWithdraw: Locator;
+  23  |     readonly withdrawInvestmentAccount: Locator;
+  24  |     readonly withdrawAmount: Locator;
+  25  | 
+  26  |     constructor(page: Page) {
+  27  |         this.page = page;
+  28  | 
+  29  |         // Loan Product Locators
+  30  |         this.transactionsMenu = page.getByRole('button', { name: 'Transactions' });
+  31  |         this.investmentTab = page.getByRole('menuitem', { name: 'Investment Payment & Receipt' });
+  32  |         this.addAccount = page.getByRole('button', { name: 'New' });
+  33  |         this.accountType = page.getByLabel('Account Type');
+  34  |         this.amount = page.getByRole('spinbutton', { name: 'Amount' });
+  35  |         this.add = page.getByRole('button', { name: 'Add' });
+  36  |         this.addToList = page.getByRole('button', { name: 'Add to list' });
+  37  |         this.process = page.locator('button').filter({ hasText: 'Process' });
+  38  |         this.transactionTypeDeposit = page.getByLabel('Transaction Type');
+  39  |         this.branch = page.getByLabel('Branch');
+  40  |         this.depositInvestmentAccount = page.getByLabel('Investment Account');
+  41  |         this.depositAmount = page.getByRole('spinbutton', { name: 'Amount' });
+  42  |         this.interestRate = page.getByRole('spinbutton', { name: 'Interest Rate (%)' });
+  43  |         this.period = page.getByRole('spinbutton', { name: 'Period (months)' });
+  44  |         this.note = page.getByRole('textbox', { name: 'Note' });
+  45  |         this.transactionTypeWithdraw = page.getByLabel('Transaction Type');
+  46  |         this.withdrawInvestmentAccount = page.getByLabel('Investment Account');
+  47  |         this.withdrawAmount = page.getByRole('spinbutton', { name: 'Amount' });
+  48  |     }
+  49  | 
+  50  |     // Loan Product method
+  51  |     async addInvestmentAccount(accountType: string, amount: string, interestRate: string, period: string, note: string) {
+  52  |         await this.transactionsMenu.click();
+  53  |         await this.investmentTab.click();
+  54  | 
+  55  |         await this.addAccount.click();
+  56  |         await this.page.waitForTimeout(2000);
+  57  | 
+  58  |         await this.accountType.click();
+  59  |         await this.accountType.selectOption({ label: accountType });
+  60  |         await this.page.waitForTimeout(2000);
+  61  | 
+  62  |         await this.amount.fill(amount);
+  63  |         await this.page.waitForTimeout(2000);
+  64  | 
+  65  |         await this.interestRate.fill(interestRate);
+  66  |         await this.page.waitForTimeout(2000);
+  67  | 
+  68  |         await this.period.fill(period);
+  69  |         await this.page.waitForTimeout(2000);
+  70  | 
+  71  |         await this.note.fill(note);
+  72  |         await this.page.waitForTimeout(2000);
+  73  | 
+  74  |         await this.add.click();
+  75  |         await this.page.waitForTimeout(2000);
+  76  |     }
+  77  | 
+  78  |     async depositToInvestment(transactionTypeDeposit: string, branch: string, depositInvestmentAccount: string, depositAmount: string) {
+> 79  |         await this.transactionTypeDeposit.click();
+      |                                           ^ Error: locator.click: Target page, context or browser has been closed
+  80  |         await this.transactionTypeDeposit.selectOption({ label: transactionTypeDeposit });
+  81  |         await this.page.waitForTimeout(2000);
+  82  | 
+  83  |         await this.branch.click();
+  84  |         await this.branch.selectOption({ label: branch });
+  85  |         await this.page.waitForTimeout(2000);
+  86  | 
+  87  |         await this.depositInvestmentAccount.click();
+  88  |         await this.depositInvestmentAccount.selectOption({ label: depositInvestmentAccount });
+  89  |         await this.page.waitForTimeout(2000);
+  90  | 
+  91  |         await this.depositAmount.fill(depositAmount);
+  92  |         await this.page.waitForTimeout(2000);
+  93  | 
+  94  |         await this.addToList.click();
+  95  |         await this.page.waitForTimeout(2000);
+  96  | 
+  97  |         await this.process.click();
+  98  |         await this.page.waitForTimeout(2000);
+  99  |     }
+  100 | 
+  101 |     async withdrawFromInvestment(transactionTypeWithdraw: string, branch: string, withdrawInvestmentAccount: string, withdrawAmount: string) {
+  102 |         await this.transactionTypeWithdraw.click();
+  103 |         await this.transactionTypeWithdraw.selectOption({ label: transactionTypeWithdraw });
+  104 |         await this.page.waitForTimeout(2000);
+  105 | 
+  106 |         await this.branch.click();
+  107 |         await this.branch.selectOption({ label: branch });
+  108 |         await this.page.waitForTimeout(2000);
+  109 | 
+  110 |         await this.withdrawInvestmentAccount.click();
+  111 |         await this.withdrawInvestmentAccount.selectOption({ label: withdrawInvestmentAccount });
+  112 |         await this.page.waitForTimeout(2000);
+  113 | 
+  114 |         await this.withdrawAmount.fill(withdrawAmount);
+  115 |         await this.page.waitForTimeout(2000);
+  116 | 
+  117 |         await this.addToList.click();
+  118 |         await this.page.waitForTimeout(2000);
+  119 | 
+  120 |         await this.process.click();
+  121 |         await this.page.waitForTimeout(2000);
+  122 |     }
+  123 | 
+  124 | }
+```

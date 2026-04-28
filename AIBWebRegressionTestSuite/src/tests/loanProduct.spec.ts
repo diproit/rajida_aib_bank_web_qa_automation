@@ -2,7 +2,7 @@ import { test } from '../fixtures/auth.fixture';
 import { LoanProductPage } from '../features/pages/LoanProductPage';
 import { TestData } from '../utils/testData';
 
-test('TC11 - Add New Saving Product', async ({ page }) => {
+test('TC13 - Add New Loan Product', async ({ page }) => {
 
   const loanProductPage = new LoanProductPage(page);
 

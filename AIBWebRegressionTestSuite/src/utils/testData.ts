@@ -176,6 +176,21 @@ export const TestData = {
     glPenaltyAccount: 'Employee Loan Interest', 
     glInsuranceAccount: 'Electricity Generation Income', 
     glFeeAccount: 'Contributions Income'
+  },
+
+  investment: {
+    transactionTypeDeposit: 'Deposit to Investment', 
+    branch: 'Maharagama', 
+    depositInvestmentAccount: '525-00003 - Test Investment Product',  
+    depositAmount: '1000', 
+    accountType: '525 - Test Investment Product', 
+    amount: '30000', 
+    interestRate: '6', 
+    period: '18', 
+    note: 'Test Automation', 
+    transactionTypeWithdraw: 'Withdraw from Investment', 
+    withdrawInvestmentAccount: '1-514-00001 - External Investment (Anually)', 
+    withdrawAmount: '2000'
   }
 
 };
