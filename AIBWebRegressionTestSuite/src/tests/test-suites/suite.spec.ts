@@ -12,6 +12,8 @@ import * as savingProduct from '../savingProduct.spec'
 import * as investmentProduct from '../investmentProduct.spec'
 import * as loanProduct from '../loanProduct.spec'
 import * as investment from '../investment.spec'
+import * as glAccount from '../generalLedgerAccount.spec';
+
 import * as signOff from '../signOff.spec';
 
 
@@ -27,7 +29,9 @@ import * as signOff from '../signOff.spec';
 // test.use(savingProduct);
 // test.use(investmentProduct);
 // test.use(loanProduct);
-test.use(investment);
+// test.use(investment);
+// test.use(glAccount);
+
 
 
 

@@ -3,7 +3,6 @@ import { Page, Locator, expect } from '@playwright/test';
 export class ChartOfAccountPage {
     readonly page: Page;
 
-    // LoanApplication Locators
     readonly setupMenu: Locator;
     readonly coaTab: Locator;
     readonly addCoa: Locator;
