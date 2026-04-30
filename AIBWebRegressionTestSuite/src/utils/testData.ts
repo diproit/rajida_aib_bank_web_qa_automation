@@ -198,6 +198,22 @@ export const TestData = {
     section: 'Bank',
     coa: 'Employee Loan',
     budget: '30000'
+  },
+
+  pawningItemTypes: {
+    nameEng: 'Test Automation Item', 
+    nameSin: 'පරීක්ෂණ ස්වයංක්‍රීය අයිතමය', 
+    nameTam: 'சோதனை ஆட்டோமேஷன் உருப்படி'
+  },
+
+  pawningItemsAssessed: {
+    carat: '28', 
+    marketValue: '35000', 
+    gramValue: '20000'
+  },
+
+  clientQuotation: {
+    
   }
 
 };
