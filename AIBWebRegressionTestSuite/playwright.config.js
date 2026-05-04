@@ -23,7 +23,7 @@ module.exports = defineConfig({
     headless: false,
     slowMo: 5000,
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    video: 'on',
     trace: 'on-first-retry',
 
     launchOptions: {

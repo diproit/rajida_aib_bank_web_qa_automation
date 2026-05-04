@@ -23,8 +23,16 @@ export const TestData = {
     accountName: 'Electracity Bill Expenses',
     payTo: 'Test Automation',
     description: 'Test Automation',
-    amount: '3000',
+    amount: '4000',
 
+  },
+
+  approval: {
+    currentUser: '@NilkiHR',
+    username2: 'nilki',
+    password2: 'nilki123',
+    user: 'Nilki Ratnayake',
+    currentUser2: '@nilki'
   },
 
   withdrawal: {
@@ -38,10 +46,10 @@ export const TestData = {
     section: 'Bank',
     accountName1: 'Stationeries Stock In Hand (Office)',
     description1: 'Test Automation',
-    credit: '7000',
+    credit: '3000',
     accountName2: 'Pension Fund',
     description2: 'Test Automation',
-    debit: '7000',
+    debit: '3000',
   },
 
   loanApplication: {
@@ -201,19 +209,19 @@ export const TestData = {
   },
 
   pawningItemTypes: {
-    nameEng: 'Test Automation Item', 
-    nameSin: 'පරීක්ෂණ ස්වයංක්‍රීය අයිතමය', 
+    nameEng: 'Test Automation Item',
+    nameSin: 'පරීක්ෂණ ස්වයංක්‍රීය අයිතමය',
     nameTam: 'சோதனை ஆட்டோமேஷன் உருப்படி'
   },
 
   pawningItemsAssessed: {
-    carat: '28', 
-    marketValue: '35000', 
+    carat: '28',
+    marketValue: '35000',
     gramValue: '20000'
   },
 
   clientQuotation: {
-    
+
   }
 
 };

@@ -14,7 +14,14 @@ export class PaymentPage {
   readonly description: Locator;
   readonly amount: Locator;
   readonly sendToApproval: Locator;
-  readonly paymentSuccessMessage: Locator;
+
+  readonly logoutButton: Locator;
+
+  // Approval Locators
+  readonly approvalTab: Locator;
+  readonly allSection: Locator;
+  readonly paymentSection: Locator;
+  readonly approveButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -29,9 +36,24 @@ export class PaymentPage {
     this.description = page.getByRole('textbox', { name: 'Description' });
     this.amount = page.getByPlaceholder('0.00');
     this.sendToApproval = page.getByRole('button', { name: 'Send to Approval' });
-    this.paymentSuccessMessage = page.getByText('Transactions saved with No');
+
+    this.logoutButton = page.getByRole('menuitem', { name: 'Logout' });
+
+    // Approval Loactors
+    this.approvalTab = page.getByRole('menuitem', { name: 'Approvals' });
+    this.allSection = page.getByRole('button', { name: 'All Sections' });
+    this.paymentSection = this.page.getByRole('menuitem', { name: 'Payment' });
+    this.approveButton = page.getByRole('button', { name: 'Approve' });
 
   }
+
+
+
+  //Click the current  user
+  currentUserLocator(currentUser: string): Locator {
+    return this.page.getByText(currentUser);
+  }
+
 
   // Method to get dynamic accountNameFill locator
   getAccountNameLocator(accountName: string): Locator {
@@ -66,10 +88,42 @@ export class PaymentPage {
     await this.page.waitForTimeout(3000);
   }
 
-  async validatePaymentSuccess() {
+  async logoutFromCurrentUser(currentUser: string) {
+    const currentUserLocator = this.currentUserLocator(currentUser);
+    await currentUserLocator.click();
     await this.page.waitForTimeout(3000);
-    await expect(this.paymentSuccessMessage).toBeVisible();
+
+    await this.logoutButton.click();
     await this.page.waitForTimeout(3000);
   }
+
+  async approvePayment(user: string) {
+    await this.transactionsMenu.click();
+    await this.approvalTab.click();
+    await this.page.waitForTimeout(3000);
+
+    await this.allSection.click();
+    await this.page.waitForTimeout(3000);
+
+    await this.paymentSection.click();
+    await this.page.waitForTimeout(3000);
+
+    const clickPayment = this.page.getByText(user).first();
+    await clickPayment.click();
+    await this.page.waitForTimeout(3000);
+    await this.approveButton.click();
+    await this.page.waitForTimeout(3000);
+
+  }
+
+  async logoutFromCurrentUser2(currentUser2: string) {
+    const currentUserLocator = this.currentUserLocator(currentUser2);
+    await currentUserLocator.click();
+    await this.page.waitForTimeout(3000);
+
+    await this.logoutButton.click();
+    await this.page.waitForTimeout(3000);
+  }
+
 
 }

@@ -37,13 +37,15 @@ export class LoginPage {
     await this.password.fill(password);
     await this.page.waitForTimeout(2000);
     await this.loginBtn.click();
+    await this.page.waitForTimeout(3000);
+
   }
 
   async validateLoginSuccess() {
     await this.page.waitForTimeout(2000);
     await expect(this.dashboard).toBeVisible();
   }
- 
+
   async cashierSignIn(cashBook: string, openingCashAmount: string) {
     await this.signedOff.click();
     await this.cashBook.click();
