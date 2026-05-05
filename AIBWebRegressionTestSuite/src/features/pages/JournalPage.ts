@@ -18,6 +18,14 @@ export class JournalPage {
   readonly sendToApproval: Locator;
   readonly journalSuccessMessage: Locator;
 
+   readonly logoutButton: Locator;
+
+  // Approval Locators
+  readonly approvalTab: Locator;
+  readonly allSection: Locator;
+  readonly journalSection: Locator;
+  readonly approveButton: Locator;
+
   constructor(page: Page) {
     this.page = page;
 
@@ -35,6 +43,19 @@ export class JournalPage {
     this.sendToApproval = page.getByRole('button', { name: 'Send to Approve' });
     this.journalSuccessMessage = page.getByText('Journal transaction processed');
 
+    this.logoutButton = page.getByRole('menuitem', { name: 'Logout' });
+
+    // Approval Loactors
+    this.approvalTab = page.getByRole('menuitem', { name: 'Approvals' });
+    this.allSection = page.getByRole('button', { name: 'All Sections' });
+    this.journalSection = this.page.getByRole('menuitem', { name: 'Journal' });
+    this.approveButton = page.getByRole('button', { name: 'Approve' });
+
+  }
+
+  //Click the current  user
+  currentUserLocator(currentUser: string): Locator {
+    return this.page.getByText(currentUser);
   }
 
   // Method to get dynamic accountNameFill locator
@@ -86,10 +107,42 @@ export class JournalPage {
     await this.page.waitForTimeout(3000);
   }
 
-  async validateJournalSuccess() {
+  async logoutFromCurrentUser(currentUser: string) {
+    const currentUserLocator = this.currentUserLocator(currentUser);
+    await currentUserLocator.click();
     await this.page.waitForTimeout(3000);
-    await expect(this.journalSuccessMessage).toBeVisible();
+
+    await this.logoutButton.click();
     await this.page.waitForTimeout(3000);
   }
+
+  async approveJournal(user: string) {
+    await this.transactionsMenu.click();
+    await this.approvalTab.click();
+    await this.page.waitForTimeout(3000);
+
+    await this.allSection.click();
+    await this.page.waitForTimeout(3000);
+
+    await this.journalSection.click();
+    await this.page.waitForTimeout(3000);
+
+    const clickJournal = this.page.getByText(user).first();
+    await clickJournal.click();
+    await this.page.waitForTimeout(3000);
+    await this.approveButton.click();
+    await this.page.waitForTimeout(3000);
+
+  }
+
+  async logoutFromCurrentUser2(currentUser2: string) {
+    const currentUserLocator = this.currentUserLocator(currentUser2);
+    await currentUserLocator.click();
+    await this.page.waitForTimeout(3000);
+
+    await this.logoutButton.click();
+    await this.page.waitForTimeout(3000);
+  }
+
 
 }
